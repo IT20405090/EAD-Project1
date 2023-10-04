@@ -56,9 +56,8 @@ const Home = () => {
 					<br /><br/>
 					<br/> <br/>
 					<div className="buttons">
-                    <button style={buttonStyles.button}>Train Management</button>
-                    <button style={buttonStyles.button2}>Ticket Booking Management</button>
-                    <button style={buttonStyles.button3}>Travel Management</button>
+                    <a href="/train-management">Train Management</a>
+                    
 					</div>
 				
 				
