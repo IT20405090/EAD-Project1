@@ -57,6 +57,8 @@ const Home = () => {
 					<br/> <br/>
 					<div className="buttons">
                     <a href="/train-management">Train Management</a>
+                    <a href="/ticket-management">Ticket Booking Management</a>
+                    <a>Travel Management</a>
                     
 					</div>
 				
