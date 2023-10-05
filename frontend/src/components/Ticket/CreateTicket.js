@@ -6,7 +6,7 @@ const CreateTicket = () => {
       <h2>Train Ticket Booking</h2>
       
       <form>
-        <h3>Journey Details</h3>
+        <h3>Journey Details  Ref ID 01</h3>
         <div className="row">
             <center>
           <div className="col-md-7">
@@ -22,14 +22,14 @@ const CreateTicket = () => {
               <label htmlFor="startingPoint">Starting Point</label>
               <select id="startingPoint" className="form-select" required>
                 <option value="" disabled selected>Select Starting Point</option>
-                {/* Add your starting point options here */}
+                {/* Add starting point options  */}
               </select>
             </div>
             <div className="form-group">
               <label htmlFor="endingPoint">Ending Point</label>
               <select id="endingPoint" className="form-select" required>
                 <option value="" disabled selected>Select Ending Point</option>
-                {/* Add your ending point options here */}
+                {/* Add ending point options */}
               </select>
             </div>
             <br/>
@@ -67,7 +67,7 @@ const CreateTicket = () => {
               <label htmlFor="berth1">Berth Choice</label>
               <select id="berth1" className="form-select" required>
                 <option value="" disabled selected>Select Berth</option>
-                {/* Add your berth choices here */}
+                {/* Add berth choices */}
               </select>
             </div>
             <div className="form-group">
@@ -108,7 +108,7 @@ const CreateTicket = () => {
               <label htmlFor="berth1">Berth Choice</label>
               <select id="berth1" className="form-select" >
                 <option value="" disabled selected>Select Berth</option>
-                {/* Add your berth choices here */}
+                {/* Add berth choices */}
               </select>
             </div>
             <div className="form-group">
@@ -149,7 +149,7 @@ const CreateTicket = () => {
               <label htmlFor="berth1">Berth Choice</label>
               <select id="berth1" className="form-select" >
                 <option value="" disabled selected>Select Berth</option>
-                {/* Add your berth choices here */}
+                {/* Add berth choices  */}
               </select>
             </div>
             <div className="form-group">
@@ -190,7 +190,7 @@ const CreateTicket = () => {
               <label htmlFor="berth1">Berth Choice</label>
               <select id="berth1" className="form-select" >
                 <option value="" disabled selected>Select Berth</option>
-                {/* Add your berth choices here */}
+                {/* Add berth choices */}
               </select>
             </div>
             <div className="form-group">

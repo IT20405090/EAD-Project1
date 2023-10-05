@@ -3,7 +3,7 @@ import React from 'react';
 const UpdateTicket = () => {
   return (
     <div className="container mt-5">
-      <h2>Train Ticket Booking Update</h2>
+      <h2>Train Ticket Booking Update Ref ID 01</h2>
       
       <form>
         <h3>Journey Details</h3>
@@ -22,14 +22,14 @@ const UpdateTicket = () => {
               <label htmlFor="startingPoint">Starting Point</label>
               <select id="startingPoint" className="form-select" required>
                 <option value="" disabled selected>Select Starting Point</option>
-                {/* Add your starting point options here */}
+                {/* Add starting point options  */}
               </select>
             </div>
             <div className="form-group">
               <label htmlFor="endingPoint">Ending Point</label>
               <select id="endingPoint" className="form-select" required>
                 <option value="" disabled selected>Select Ending Point</option>
-                {/* Add your ending point options here */}
+                {/* Add ending point options */}
               </select>
             </div>
             <br/>
@@ -67,7 +67,7 @@ const UpdateTicket = () => {
               <label htmlFor="berth1">Berth Choice</label>
               <select id="berth1" className="form-select" required>
                 <option value="" disabled selected>Select Berth</option>
-                {/* Add your berth choices here */}
+                {/* Add berth choices  */}
               </select>
             </div>
             <div className="form-group">
@@ -108,7 +108,7 @@ const UpdateTicket = () => {
               <label htmlFor="berth1">Berth Choice</label>
               <select id="berth1" className="form-select" >
                 <option value="" disabled selected>Select Berth</option>
-                {/* Add your berth choices here */}
+                {/* Add  berth choices  */}
               </select>
             </div>
             <div className="form-group">
@@ -149,7 +149,7 @@ const UpdateTicket = () => {
               <label htmlFor="berth1">Berth Choice</label>
               <select id="berth1" className="form-select" >
                 <option value="" disabled selected>Select Berth</option>
-                {/* Add your berth choices here */}
+                {/* Add  berth choices  */}
               </select>
             </div>
             <div className="form-group">
@@ -190,7 +190,7 @@ const UpdateTicket = () => {
               <label htmlFor="berth1">Berth Choice</label>
               <select id="berth1" className="form-select" >
                 <option value="" disabled selected>Select Berth</option>
-                {/* Add your berth choices here */}
+                {/* Add  berth choices  */}
               </select>
             </div>
             <div className="form-group">
