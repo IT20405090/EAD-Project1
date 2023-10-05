@@ -60,7 +60,7 @@ const CreateTrainSchedule = () => {
               <input type="text" className="form-control" id="trainName" required />
             </div>
             <div className="mb-3">
-              <label htmlFor="trainId" className="form-label">Train ID</label>
+              <label htmlFor="trainId" className="form-label">Available Seats</label>
               <input type="text" className="form-control" id="trainId" required />
             </div>
             <div className="mb-3">
