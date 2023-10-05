@@ -4,10 +4,22 @@ const TrainManagement = () => {
   const trainData = [
     {
       name: 'Express 123',
+      date: '10-12-23',
       departureTime: '10:00 AM',
       arrivalTimes: ['12:00 PM', '2:00 PM', '4:00 PM'],
       ticketFare: '$50',
       availableSeats: 100,
+      reserved: true
+    },
+    {
+      name: 'Express 123',
+      date: '10-12-23',
+      departureTime: '10:00 AM',
+      arrivalTimes: ['12:00 PM', '2:00 PM', '4:00 PM'],
+      ticketFare: '$50',
+      availableSeats: 100,
+      reserved: false,
+      note: 'late for 10 min'
     },
     // Add more train data as needed
   ];
@@ -37,11 +49,14 @@ const TrainManagement = () => {
       <table className="table table-bordered table-striped">
         <thead className="thead-dark">
           <tr>
+            <th>Date</th>
             <th>Train Name</th>
             <th>Departure Time</th>
             <th>Arrival Times</th>
             <th>Ticket Fare</th>
             <th>Available Seats</th>
+            <th>Reserved/Not</th>
+            <th>Notices</th>
           </tr>
         </thead>
         <tbody>
@@ -51,11 +66,18 @@ const TrainManagement = () => {
             )
             .map((train, index) => (
               <tr key={index}>
+                <td>{train.date}</td>
                 <td>{train.name}</td>
                 <td>{train.departureTime}</td>
                 <td>{train.arrivalTimes.join(', ')}</td>
                 <td>{train.ticketFare}</td>
                 <td>{train.availableSeats}</td>
+                <td>{train.reserved ? (
+                    <input type="checkbox" checked readOnly />
+                  ) : (
+                    <input type="checkbox" readOnly />
+                  )}</td>
+                  <td>{train.note}</td>
               </tr>
             ))}
         </tbody>
