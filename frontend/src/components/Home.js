@@ -15,6 +15,8 @@ const Home = () => {
 					<br/> <br/>
 					<div className="buttons">
               <a href="/train-management" className="btn btn-primary">Train Management</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			  {/* <a href="/train-management" className="btn btn-primary">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			  <a href="/train-management" className="btn btn-primary">Register</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */}
               <a href="/train-create" className="btn btn-success">Create Train Schedule</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <a href="/train-update" className=" btn btn-info">Update Train Schedule</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <a href="/ticket-management" className="btn btn-secondary">Ticket Booking Management</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
