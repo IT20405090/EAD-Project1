@@ -2,7 +2,8 @@ import React from 'react';
 
 const CreateTicket = () => {
   return (
-    <div className="container mt-5">
+    <div className="bg-light" style={{ minHeight: '100vh', padding: '20px' }}>
+    <div className="container" style={{ backgroundColor: '#d2b48c', padding: '20px', borderRadius: '10px' }}>
       <h2>Train Ticket Booking</h2>
       
       <form>
@@ -214,6 +215,7 @@ const CreateTicket = () => {
         <button type="submit" className="btn btn-primary">Submit</button>
       
       </form>
+    </div>
     </div>
   );
 };
