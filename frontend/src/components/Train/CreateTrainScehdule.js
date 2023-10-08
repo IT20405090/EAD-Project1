@@ -14,6 +14,7 @@ const CreateTrainSchedule = () => {
   }, []);
 
   return (
+    <div className="bg-light" style={{ minHeight: '100vh', padding: '20px' }}>
     <div className="container mt-5">
       <h2>Create Train Schedule </h2>
       <form>
@@ -77,6 +78,7 @@ const CreateTrainSchedule = () => {
         </div>
         <button type="submit" className="btn btn-primary">Submit</button>
       </form>
+    </div>
     </div>
   );
 };

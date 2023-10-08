@@ -25,13 +25,13 @@ body, html {
 }
 
 .blurred-background {
-  background-image: url('../images/home.gif');
+  background-image: url('../images/home1.gif');
   background-size: cover;
   filter: contrast(50%);
   height: 270%; /* Adjusted height */
   position: absolute;
   width: 100%;
-  margin-top: -13%;
+  margin-top: -14%;
   
 }
 
@@ -42,10 +42,10 @@ body, html {
   padding: 5%;
   position: fixed;
   top: 50%;
-  left: 80%;
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
-  margin-top: 15%;
+  margin-top: 16%;
   max-width: 600px;
 }
 
