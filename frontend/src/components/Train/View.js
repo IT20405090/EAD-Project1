@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Container, ButtonGroup, Button } from 'react-bootstrap';
 
 const TrainManagement = () => {
   const trainData = [
@@ -32,17 +33,26 @@ const TrainManagement = () => {
 
   return (
     <div className="container mt-4">
+      
       <h2 className="display-4 mb-4">Train Management</h2>
 
-      {/* Search Bar */}
-      <div className="mb-3">
-        <input
+      {/* Move the Create Schedule button to the top-right */}
+      <div className="d-flex justify-content-between align-items-center mb-3">
+      <input
           type="text"
           className="form-control"
           placeholder="Search trains..."
           value={searchTerm}
           onChange={handleSearch}
         />
+        &nbsp;
+        &nbsp;
+        <Button type="submit" className="btn btn-success" href="/train-create">
+          Create Schedule
+        </Button>
+      
+        {/* Search Bar */}
+        
       </div>
 
       {/* Table */}
