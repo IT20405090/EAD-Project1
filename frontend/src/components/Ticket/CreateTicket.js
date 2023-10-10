@@ -1,10 +1,20 @@
 import React from 'react';
+import image from '../../images/ticket.jpg'
 
 const CreateTicket = () => {
   return (
-    <div className="bg-light" style={{ minHeight: '100vh', padding: '20px' }}>
-    <div className="container" style={{ backgroundColor: '#d2b48c', padding: '20px', borderRadius: '10px' }}>
-      <h2>Train Ticket Booking</h2>
+    <div
+      className="bg-light"
+      style={{
+        minHeight: '100vh',
+        padding: '20px',
+        background: `url(${image})`,
+        backgroundSize: 'cover',
+      }}
+    >
+      <div className="container" style={{ backgroundColor: '#d2b48c', padding: '20px', borderRadius: '10px' }}>
+        <h2>Train Ticket Booking</h2>
+
       
       <form>
         <h3>Journey Details  Ref ID 01</h3>
