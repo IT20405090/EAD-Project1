@@ -23,7 +23,7 @@ const CreateTrainSchedule = () => {
         backgroundPosition: 'left',
       }}
     >
-      <div className="bg-light" style={{ minHeight: '92vh', padding: '20px', maxWidth: '900px', margin: 'auto' }}>
+      <div className="bg-light" style={{ minHeight: '100vh', padding: '20px', maxWidth: '900px', margin: 'auto', backgroundColor: 'rgba(255, 255, 255, 0.8)', borderRadius: '10px' }}>
         <div className="container mt-5">
           <h2>Create Train Schedule </h2>
           <br />
