@@ -23,73 +23,97 @@ const CreateTrainSchedule = () => {
         backgroundPosition: 'left',
       }}
     >
-    <div className="bg-light" style={{ minHeight: '100vh', padding: '20px', maxWidth: '900px', margin: 'auto' }}>
-    <div className="container mt-5">
-      <h2>Create Train Schedule </h2>
-      <form>
-        <div className="row">
-          <div className="col-md-6">
-            <div className="mb-3">
-              <label htmlFor="date" className="form-label">Date</label>
-              <input type="text" className="form-control datepicker" id="date" required />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="startTime" className="form-label">Start Time</label>
-              <input type="time" className="form-control" id="startTime" required />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="endTime" className="form-label">End Time</label>
-              <input type="time" className="form-control" id="endTime" required />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="startingStation" className="form-label">Starting Station</label>
-              <select className="form-select" id="startingStation" required>
-                <option value="" disabled selected>Select Starting Station</option>
-                {/* Add  starting station options  */}
-              </select>
-            </div>
-            <div className="mb-3">
-              <label htmlFor="endingStation" className="form-label">Ending Station</label>
-              <select className="form-select" id="endingStation" required>
-                <option value="" disabled selected>Select Ending Station</option>
-                {/* Add  ending station options  */}
-              </select>
-            </div>
-            <div className="form-check">
-                <input type="checkbox" className="form-check-input" id="reserved" />
-                <label className="form-check-label" htmlFor="reserved">Reserved</label>
+      <div className="bg-light" style={{ minHeight: '100vh', padding: '20px', maxWidth: '900px', margin: 'auto', backgroundColor: 'rgba(255, 255, 255, 0.8)', borderRadius: '10px' }}>
+        <div className="container mt-5">
+          <h2>Create Train Schedule </h2>
+          <br />
+          <form>
+            <div className="row">
+              <div className="col-md-6">
+                <div className="mb-3 row">
+                  <label htmlFor="date" className="col-sm-4 col-form-label">Date</label>
+                  <div className="col-sm-8">
+                    <input type="text" className="form-control datepicker" id="date" required />
+                  </div>
+                </div>
+                <div className="mb-3 row">
+                  <label htmlFor="startTime" className="col-sm-4 col-form-label">Start Time</label>
+                  <div className="col-sm-8">
+                    <input type="time" className="form-control" id="startTime" required />
+                  </div>
+                </div>
+                <div className="mb-3 row">
+                  <label htmlFor="endTime" className="col-sm-4 col-form-label">End Time</label>
+                  <div className="col-sm-8">
+                    <input type="time" className="form-control" id="endTime" required />
+                  </div>
+                </div>
+                <div className="mb-3 row">
+                  <label htmlFor="startingStation" className="col-sm-4 col-form-label">Starting Station</label>
+                  <div className="col-sm-8">
+                    <select className="form-select" id="startingStation" required>
+                      <option value="" disabled selected>Select Starting Station</option>
+                      {/* Add  starting station options  */}
+                    </select>
+                  </div>
+                </div>
+                <div className="mb-3 row">
+                  <label htmlFor="endingStation" className="col-sm-4 col-form-label">Ending Station</label>
+                  <div className="col-sm-8">
+                    <select className="form-select" id="endingStation" required>
+                      <option value="" disabled selected>Select Ending Station</option>
+                      {/* Add  ending station options  */}
+                    </select>
+                  </div>
+                </div>
+                <div className="mb-3 row">
+                  <div className="col-sm-8 offset-sm-4">
+                    <div className="form-check">
+                      <input type="checkbox" className="form-check-input" id="reserved" />
+                      <label className="form-check-label" htmlFor="reserved">Reserved</label>
+                    </div>
+                  </div>
+                </div>
               </div>
-          </div>
 
-      
-
-          <div className="col-md-6">
-            <div className="mb-3">
-              <label htmlFor="duration" className="form-label">Estimated Duration (hours)</label>
-              <input type="number" className="form-control" id="duration" required />
+              <div className="col-md-6">
+                <div className="mb-3 row">
+                  <label htmlFor="duration" className="col-sm-4 col-form-label">Estimated Duration (hours)</label>
+                  <div className="col-sm-8">
+                    <input type="number" className="form-control" id="duration" required />
+                  </div>
+                </div>
+                <div className="mb-3 row">
+                  <label htmlFor="engine" className="col-sm-4 col-form-label">Train Engine</label>
+                  <div className="col-sm-8">
+                    <input type="text" className="form-control" id="engine" required />
+                  </div>
+                </div>
+                <div className="mb-3 row">
+                  <label htmlFor="trainName" className="col-sm-4 col-form-label">Train Name</label>
+                  <div className="col-sm-8">
+                    <input type="text" className="form-control" id="trainName" required />
+                  </div>
+                </div>
+                <div className="mb-3 row">
+                  <label htmlFor="trainId" className="col-sm-4 col-form-label">Available Seats</label>
+                  <div className="col-sm-8">
+                    <input type="text" className="form-control" id="trainId" required />
+                  </div>
+                </div>
+                {/* Special Notices field takes full width */}
+                <div className="mb-3 row">
+                  <label htmlFor="specialNotices" className="col-sm-12 col-form-label">Special Notices</label>
+                  <div className="col-sm-12">
+                    <textarea className="form-control" id="specialNotices" rows="4"></textarea>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="mb-3">
-              <label htmlFor="engine" className="form-label">Train Engine</label>
-              <input type="text" className="form-control" id="engine" required />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="trainName" className="form-label">Train Name</label>
-              <input type="text" className="form-control" id="trainName" required />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="trainId" className="form-label">Available Seats</label>
-              <input type="text" className="form-control" id="trainId" required />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="specialNotices" className="form-label">Special Notices</label>
-              <textarea className="form-control" id="specialNotices" rows="4"></textarea>
-            </div>
-          </div>
+            <button type="submit" className="btn btn-primary">Submit</button>
+          </form>
         </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
-      </form>
-    </div>
-    </div>
+      </div>
     </div>
   );
 };
