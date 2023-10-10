@@ -1,66 +1,66 @@
 import React, { useState } from 'react';
-import { Container, ButtonGroup, Button } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
+import trainImage from '../../images/manage.jpg';
 
 const TrainManagement = () => {
   const trainData = [
-    {
-      name: 'Express 123',
-      date: '10-12-23',
-      departureTime: '10:00 AM',
-      arrivalTimes: ['12:00 PM', '2:00 PM', '4:00 PM'],
-      ticketFare: '$50',
-      availableSeats: 100,
-      reserved: true
-    },
-    {
-      name: 'Express 123',
-      date: '10-12-23',
-      departureTime: '10:00 AM',
-      arrivalTimes: ['12:00 PM', '2:00 PM', '4:00 PM'],
-      ticketFare: '$50',
-      availableSeats: 100,
-      reserved: false,
-      note: 'late for 10 min'
-    },
-    {
-      name: 'Express 123',
-      date: '10-12-23',
-      departureTime: '10:00 AM',
-      arrivalTimes: ['12:00 PM', '2:00 PM', '4:00 PM'],
-      ticketFare: '$50',
-      availableSeats: 100,
-      reserved: true
-    },
-    {
-      name: 'Express 123',
-      date: '10-12-23',
-      departureTime: '10:00 AM',
-      arrivalTimes: ['12:00 PM', '2:00 PM', '4:00 PM'],
-      ticketFare: '$50',
-      availableSeats: 100,
-      reserved: false,
-      note: 'late for 10 min'
-    },
-    {
-      name: 'Express 123',
-      date: '10-12-23',
-      departureTime: '10:00 AM',
-      arrivalTimes: ['12:00 PM', '2:00 PM', '4:00 PM'],
-      ticketFare: '$50',
-      availableSeats: 100,
-      reserved: true
-    },
-    {
-      name: 'Express 123',
-      date: '10-12-23',
-      departureTime: '10:00 AM',
-      arrivalTimes: ['12:00 PM', '2:00 PM', '4:00 PM'],
-      ticketFare: '$50',
-      availableSeats: 100,
-      reserved: false,
-      note: 'late for 10 min'
-    },
-    // Add more train data as needed
+      {
+        name: 'Express 123',
+        date: '10-12-23',
+        departureTime: '10:00 AM',
+        arrivalTimes: ['12:00 PM', '2:00 PM', '4:00 PM'],
+        ticketFare: '$50',
+        availableSeats: 100,
+        reserved: true
+      },
+      {
+        name: 'Express 123',
+        date: '10-12-23',
+        departureTime: '10:00 AM',
+        arrivalTimes: ['12:00 PM', '2:00 PM', '4:00 PM'],
+        ticketFare: '$50',
+        availableSeats: 100,
+        reserved: false,
+        note: 'late for 10 min'
+      },
+      {
+        name: 'Express 123',
+        date: '10-12-23',
+        departureTime: '10:00 AM',
+        arrivalTimes: ['12:00 PM', '2:00 PM', '4:00 PM'],
+        ticketFare: '$50',
+        availableSeats: 100,
+        reserved: true
+      },
+      {
+        name: 'Express 123',
+        date: '10-12-23',
+        departureTime: '10:00 AM',
+        arrivalTimes: ['12:00 PM', '2:00 PM', '4:00 PM'],
+        ticketFare: '$50',
+        availableSeats: 100,
+        reserved: false,
+        note: 'late for 10 min'
+      },
+      {
+        name: 'Express 123',
+        date: '10-12-23',
+        departureTime: '10:00 AM',
+        arrivalTimes: ['12:00 PM', '2:00 PM', '4:00 PM'],
+        ticketFare: '$50',
+        availableSeats: 100,
+        reserved: true
+      },
+      {
+        name: 'Express 123',
+        date: '10-12-23',
+        departureTime: '10:00 AM',
+        arrivalTimes: ['12:00 PM', '2:00 PM', '4:00 PM'],
+        ticketFare: '$50',
+        availableSeats: 100,
+        reserved: false,
+        note: 'late for 10 min'
+      },
   ];
 
   const [searchTerm, setSearchTerm] = useState('');
@@ -70,8 +70,16 @@ const TrainManagement = () => {
   };
 
   return (
-    <div style={{ backgroundColor: '#d2b48c', height: '100vh', padding: '20px' }}>
-      <Container className="mt-4 p-4" style={{ backgroundColor: '#ffffff', borderRadius: '10px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
+    <div
+      style={{
+        backgroundImage: `url(${trainImage})`, // Use your train image
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '100vh',
+        padding: '20px',
+      }}
+    >
+      <Container className="mt-4 p-4" style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)', borderRadius: '10px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
         
         <h2 className="display-4 mb-4">Train Management</h2>
 
@@ -89,9 +97,6 @@ const TrainManagement = () => {
           <Button type="submit" className="btn btn-success" href="/train-create">
             Create Schedule
           </Button>
-          
-          {/* Search Bar */}
-          
         </div>
 
         {/* Table */}
@@ -121,12 +126,14 @@ const TrainManagement = () => {
                   <td>{train.arrivalTimes.join(', ')}</td>
                   <td>{train.ticketFare}</td>
                   <td>{train.availableSeats}</td>
-                  <td>{train.reserved ? (
+                  <td>
+                    {train.reserved ? (
                       <input type="checkbox" checked readOnly />
                     ) : (
                       <input type="checkbox" readOnly />
-                    )}</td>
-                    <td>{train.note}</td>
+                    )}
+                  </td>
+                  <td>{train.note}</td>
                 </tr>
               ))}
           </tbody>
