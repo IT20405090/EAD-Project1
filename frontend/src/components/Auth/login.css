@@ -1,15 +1,19 @@
 /* login.css */
 
-/* Center the card */
-
 /* Style the card */
 .card1 {
-  width: 100%;
-  max-width: 400px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  background-color: #fff;
-  border-radius: 5px;
+  background-color: rgba(48, 47, 47, 0.5); /* Adjusted alpha value for transparency */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 5%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  margin-top: 0%;
+  max-width: 600px;
+  color: #fff;
 }
 
 /* Card header style */
@@ -51,6 +55,14 @@
   color: #fff;
   border: none;
   border-radius: 3px;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
+/* Button style */
+.btn-secondary {
+  border: none;
+  border-radius: 3px;
   padding: 10px 20px;
   cursor: pointer;
 }
@@ -60,20 +72,18 @@
 }
 
 .login-background {
-  background-image: url('../../images/login.avif');
+  background-image: url('../../images/login.jpeg');
   background-size: cover;
-  /* filter: contrast(50%); */
-  height: 170%; /* Adjusted height */
+  height: 100%; /* Adjusted height */
   position: fixed;
   width: 100%;
   /* margin-top: -14%; */
   
+  
+  
 }
 
-/* Additional styles for the "Register" button */
-.btn-secondary {
-  background-color: #6c757d;
-}
+
 
 .btn-secondary:hover {
   background-color: #545b62;

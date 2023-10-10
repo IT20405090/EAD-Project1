@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './register.css'; // Import the custom CSS file
 
 const RegisterPage = () => {
   const [username, setUsername] = useState('');
@@ -33,14 +34,14 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="register-background">
       <div className="row justify-content-center">
         <div className="col-md-6">
-          <div className="card">
-            <div className="card-header">
+          <div className="card3">
+            <div className="card-header3">
               <h3>Register</h3>
             </div>
-            <div className="card-body">
+            <div className="card-body3">
               <form>
                 {/* Username Input */}
                 <div className="mb-3">

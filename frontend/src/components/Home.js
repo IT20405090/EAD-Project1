@@ -6,13 +6,14 @@ const Home = () => {
     return (
         <section className="homepage">
             <div className="home">
-                <h1 className="main-title"><b>Travel Reservation Web Application</b></h1>
+                
+                <h1 className="multicolor-text"><b>Travel Reservation Web Application</b></h1>
             </div>
             <br /><br />
             <br /> <br />
             <div className="buttons">
                 <div>
-                    <div className="header">
+                <img className="home-image" src="/images/home1.gif" alt="Me" width="1680" height="500" />   <div className="header">
                         <Container>
                             <h5>Seamless Travel Experiences Await You, Empowering Your Journeys: Introducing the Next Generation Ticket Reservation System</h5>
                         </Container>

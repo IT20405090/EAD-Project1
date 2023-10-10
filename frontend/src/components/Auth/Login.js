@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './login.css'; // Import your custom CSS file
+import './login.css'; // Import the custom CSS file
 
 
 const LoginPage = () => {
@@ -36,17 +36,22 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="container mt-5">
+   
+    <div className="login-background">
       <div className="row justify-content-center">
         <div className="col-md-6">
+      
           <div className="card1">
+          
             <div className="card-header1">
-            <div className="login-background"></div>
+            
               <h3>Login</h3>
             </div>
             <div className="card-body1">
+            
               <form>
                 {/* Username Input */}
+                <br/>
                 <div className="mb-3">
                   <label htmlFor="username" className="form-label">
                     Username
@@ -80,7 +85,7 @@ const LoginPage = () => {
                   className="btn btn-primary"
                   onClick={handleLogin}
                 >
-                  Login
+                  Login  
                 </button>
 
                 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -89,7 +94,6 @@ const LoginPage = () => {
                 <button
                   type="button"
                   className="btn btn-secondary"
-                  
                   onClick={handleRegister}
                 >
                   Register

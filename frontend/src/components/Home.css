@@ -9,31 +9,59 @@ body, html {
   text-align: center;
   background-color: #333;
   color: #fbf8f8;
-  margin-top: -5%;
+  margin-top: 0%;
   padding-bottom: 1%;
   padding-top: 1%;
 }
 
-.main-title {
-  font-size: 3em;
-  margin-top: 1%;
-}
+
 
 .content {
   position: relative;
   height: 100%; /* Added height to ensure full height */
+  background-color: #867f7f;
 }
 
-.blurred-background {
-  background-image: url('../images/home1.gif');
-  background-size: cover;
-  filter: contrast(50%);
-  height: 270%; /* Adjusted height */
-  position: absolute;
-  width: 100%;
-  margin-top: -14%;
+.home-image {
+ 
+  margin-top: -6%;
   
 }
+
+.homepage{
+  background-color: #d8d8d8;
+}
+
+.multicolor-text {
+  text-align: center;
+  font-size: 70px;
+  background: linear-gradient(to left,
+  rgb(5, 5, 5),
+  rgb(37, 37, 37),
+  rgb(74, 74, 75),
+  rgb(116, 116, 116),
+  rgb(85, 35, 52),
+  rgb(145, 35, 35),
+  rgb(192, 49, 49));
+  /* background: linear-gradient(to left,
+    rgb(29, 3, 71),
+    rgb(9, 0, 130),
+    blue,
+    rgb(187, 184, 29),
+    rgb(17, 150, 117),
+    rgb(9, 112, 49),
+    rgb(1, 54, 29)); */
+  -webkit-background-clip: text;
+  color: transparent;
+
+}
+
+.home {
+  /* background-image: linear-gradient(rgb(197, 228, 243), rgb(245, 247, 245)); */
+  background-image: linear-gradient(rgb(179, 177, 177), rgb(238, 236, 236));
+  height: 100px;
+}
+
 
 .card {
   background-color: rgba(48, 47, 47, 0.5); /* Adjusted alpha value for transparency */
