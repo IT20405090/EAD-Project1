@@ -64,7 +64,7 @@
   background-size: cover;
   /* filter: contrast(50%); */
   height: 170%; /* Adjusted height */
-  position: fixed;
+  position: center;
   width: 100%;
   /* margin-top: -14%; */
   
