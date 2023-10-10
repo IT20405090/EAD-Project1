@@ -8,7 +8,9 @@ import CreateTicket from "./components/Ticket/CreateTicket";
 import UpdateTicket from "./components/Ticket/UpdateTicket";
 import CreateTrainSchedule from "./components/Train/CreateTrainScehdule";
 import UpdateTrainSchedule from "./components/Train/UpdateTrainSchedule";
+
 import LoginPage from "./components/Auth/Login"; // Import LoginPage component
+import RegisterPage from "./components/Auth/Register";
 
 export default function AppRouter() {
   return (
@@ -16,6 +18,9 @@ export default function AppRouter() {
       <Router>
         <Routes>
           <Route path="/" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+
+
           <Route path="/home" element={<Home />} />
           <Route path="/train-management" element={<TrainManagement />} />
           <Route path="/train-create" element={<CreateTrainSchedule />} />

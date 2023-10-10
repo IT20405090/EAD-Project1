@@ -2,12 +2,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './login.css'; // Import your custom CSS file
 
-
-const LoginPage = () => {
+const RegisterPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [reenpassword, setReEnPassword] = useState('');
   const navigate = useNavigate(); // Import useNavigate from react-router-dom
 
   const handleUsernameChange = (e) => {
@@ -18,33 +17,30 @@ const LoginPage = () => {
     setPassword(e.target.value);
   };
 
+  const handleReEnPasswordChange = (e) => {
+    setReEnPassword(e.target.value);
+  };
+
   const handleLogin = () => {
     // For simplicity, just log the entered username and password for now
     console.log('Username:', username);
     console.log('Password:', password);
+    console.log('ReEnPassword:', reenpassword);
     // Add your authentication logic here (e.g., call an API, validate against a database)
 
     // If authentication is successful, navigate to the Home page
     navigate('/home');
   };
 
-  const handleRegister = () => {
-
-
-    // If authentication is successful, navigate to the Home page
-    navigate('/Register');
-  };
-
   return (
     <div className="container mt-5">
       <div className="row justify-content-center">
         <div className="col-md-6">
-          <div className="card1">
-            <div className="card-header1">
-            <div className="login-background"></div>
-              <h3>Login</h3>
+          <div className="card">
+            <div className="card-header">
+              <h3>Register</h3>
             </div>
-            <div className="card-body1">
+            <div className="card-body">
               <form>
                 {/* Username Input */}
                 <div className="mb-3">
@@ -71,8 +67,21 @@ const LoginPage = () => {
                     value={password}
                     onChange={handlePasswordChange}
                   />
-
-                  
+       
+                </div>
+                {/* Re enter Password */}
+                <div className="mb-3">
+                  <label htmlFor="re-en-password" className="form-label">
+                    Re-enter Password
+                  </label>
+                  <input
+                    type="password"
+                    className="form-control"
+                    id="reenpassword"
+                    value={reenpassword}
+                    onChange={handleReEnPasswordChange}
+                  />
+       
                 </div>
                 {/* Login Button */}
                 <button
@@ -89,8 +98,7 @@ const LoginPage = () => {
                 <button
                   type="button"
                   className="btn btn-secondary"
-                  
-                  onClick={handleRegister}
+                //   onClick={handleRegister}
                 >
                   Register
                 </button>
@@ -103,4 +111,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default RegisterPage;
