@@ -74,7 +74,8 @@
 .login-background {
   background-image: url('../../images/login.jpeg');
   background-size: cover;
-  height: 100%; /* Adjusted height */
+  /* filter: contrast(50%); */
+  height: 170%; /* Adjusted height */
   position: fixed;
   width: 100%;
   /* margin-top: -14%; */

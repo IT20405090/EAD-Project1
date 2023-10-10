@@ -4,8 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js';
-
-
+import scheduleImage from '../../images/schedule.jpg';
 
 const CreateTrainSchedule = () => {
   useEffect(() => {
@@ -14,7 +13,17 @@ const CreateTrainSchedule = () => {
   }, []);
 
   return (
-    <div className="bg-light" style={{ minHeight: '100vh', padding: '20px' }}>
+    <div
+      className="container-fluid"
+      style={{
+        minHeight: '100vh',
+        padding: '20px',
+        backgroundImage: `url(${scheduleImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'left',
+      }}
+    >
+    <div className="bg-light" style={{ minHeight: '100vh', padding: '20px', maxWidth: '900px', margin: 'auto' }}>
     <div className="container mt-5">
       <h2>Create Train Schedule </h2>
       <form>
@@ -46,7 +55,14 @@ const CreateTrainSchedule = () => {
                 {/* Add  ending station options  */}
               </select>
             </div>
+            <div className="form-check">
+                <input type="checkbox" className="form-check-input" id="reserved" />
+                <label className="form-check-label" htmlFor="reserved">Reserved</label>
+              </div>
           </div>
+
+      
+
           <div className="col-md-6">
             <div className="mb-3">
               <label htmlFor="duration" className="form-label">Estimated Duration (hours)</label>
@@ -65,12 +81,6 @@ const CreateTrainSchedule = () => {
               <input type="text" className="form-control" id="trainId" required />
             </div>
             <div className="mb-3">
-              <div className="form-check">
-                <input type="checkbox" className="form-check-input" id="reserved" />
-                <label className="form-check-label" htmlFor="reserved">Reserved</label>
-              </div>
-            </div>
-            <div className="mb-3">
               <label htmlFor="specialNotices" className="form-label">Special Notices</label>
               <textarea className="form-control" id="specialNotices" rows="4"></textarea>
             </div>
@@ -78,6 +88,7 @@ const CreateTrainSchedule = () => {
         </div>
         <button type="submit" className="btn btn-primary">Submit</button>
       </form>
+    </div>
     </div>
     </div>
   );
