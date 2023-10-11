@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js';
-import './TrainSchedule.css'
+import scheduleImage from '../../images/schedule.jpg';
 
 const CreateTrainSchedule = () => {
   useEffect(() => {
@@ -13,15 +13,24 @@ const CreateTrainSchedule = () => {
   }, []);
 
   return (
-    <div className="container-fluid">
-    <div className="bg-light" >
+    <div
+      className="container-fluid"
+      style={{
+        minHeight: '100vh',
+        padding: '20px',
+        backgroundImage: `url(${scheduleImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'left',
+      }}
+    >
+    <div className="bg-light" style={{ minHeight: '100vh', padding: '20px', maxWidth: '900px', margin: 'auto' }}>
     <div className="container mt-5">
-      <h2 className='TrainScehdule_topic'> Create Train Schedule </h2> <br/>
+      <h2>Create Train Schedule </h2>
       <form>
-        <div className="row" style={{ textAlign: 'left', color:'gray', fontSize:'20px' }}>
+        <div className="row">
           <div className="col-md-6">
             <div className="mb-3">
-              <label htmlFor="date" className="form-label"  >Date</label>
+              <label htmlFor="date" className="form-label">Date</label>
               <input type="text" className="form-control datepicker" id="date" required />
             </div>
             <div className="mb-3">
@@ -46,6 +55,10 @@ const CreateTrainSchedule = () => {
                 {/* Add  ending station options  */}
               </select>
             </div>
+            <div className="form-check">
+                <input type="checkbox" className="form-check-input" id="reserved" />
+                <label className="form-check-label" htmlFor="reserved">Reserved</label>
+              </div>
           </div>
 
       
@@ -73,7 +86,7 @@ const CreateTrainSchedule = () => {
             </div>
           </div>
         </div>
-        <button type="submit" className="btn btn-primary">Create</button>
+        <button type="submit" className="btn btn-primary">Submit</button>
       </form>
     </div>
     </div>
