@@ -6,7 +6,7 @@ import TicketManagement from "./components/Ticket/View";
 import Home from "./components/Home";
 import CreateTicket from "./components/Ticket/CreateTicket";
 import UpdateTicket from "./components/Ticket/UpdateTicket";
-import CreateTrainSchedule from "./components/Train/CreateTrainScehdule";
+import CreateTrainSchedule from "./components/Train/CreateTrainSchehdule";
 import UpdateTrainSchedule from "./components/Train/UpdateTrainSchedule";
 
 import LoginPage from "./components/Auth/Login"; // Import LoginPage component
