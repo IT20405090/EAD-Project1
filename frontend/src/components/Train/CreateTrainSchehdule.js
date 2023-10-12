@@ -74,7 +74,15 @@ const CreateTrainSchedule = () => {
             </div>
           </div>
         </div>
-        <button type="submit" className="btn btn-secondary">Submit</button>
+        <div className="mb-3">
+          <button type="submit" className="btn btn-primary" style={{ marginRight: '20%' }}>
+            Submit
+          </button>
+          <button type="submit" className="btn btn-secondary">
+            Back
+          </button>
+        </div>
+
       </form>
     </div>
     </div>
