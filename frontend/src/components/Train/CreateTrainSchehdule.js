@@ -6,6 +6,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js';
 // import scheduleImage from '../../images/schedule.jpg';
 import "./TrainSchedule.css"
+import { Link } from 'react-router-dom';
 
 const CreateTrainSchedule = () => {
   useEffect(() => {
@@ -74,7 +75,18 @@ const CreateTrainSchedule = () => {
             </div>
           </div>
         </div>
-        <button type="submit" className="btn btn-secondary">Submit</button>
+        <div className="mb-3">
+        <Link to="/train-management">
+        <button type="submit" className="btn btn-secondary"style={{ marginRight: '20%' }}>
+            Back
+          </button>
+        </Link>
+          <button type="submit" className="btn btn-primary" >
+            Submit
+          </button>
+          
+        </div>
+
       </form>
     </div>
     </div>
