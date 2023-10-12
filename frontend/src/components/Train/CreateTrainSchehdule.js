@@ -4,7 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js';
-import scheduleImage from '../../images/schedule.jpg';
+// import scheduleImage from '../../images/schedule.jpg';
+import "./TrainSchedule.css"
 
 const CreateTrainSchedule = () => {
   useEffect(() => {
@@ -13,25 +14,16 @@ const CreateTrainSchedule = () => {
   }, []);
 
   return (
-    <div
-      className="container-fluid"
-      style={{
-        minHeight: '100vh',
-        padding: '20px',
-        backgroundImage: `url(${scheduleImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'left',
-      }}
-    >
-    <div className="bg-light" style={{ minHeight: '100vh', padding: '20px', maxWidth: '900px', margin: 'auto' }}>
+    <div className="container-fluid">
+    <div className="bg-light">
     <div className="container mt-5">
-      <h2>Create Train Schedule </h2>
+      <h2 className="TrainScehdule_topic" >Create Train Schedule </h2> <br/>
       <form>
-        <div className="row">
+        <div className="row" style={{ textAlign: 'left', color:'gray', fontSize:'20px' }}>
           <div className="col-md-6">
             <div className="mb-3">
               <label htmlFor="date" className="form-label">Date</label>
-              <input type="text" className="form-control datepicker" id="date" required />
+              <input type="text" className="form-control datepicker" id="date" placeholder='Date' required />
             </div>
             <div className="mb-3">
               <label htmlFor="startTime" className="form-label">Start Time</label>
@@ -55,10 +47,6 @@ const CreateTrainSchedule = () => {
                 {/* Add  ending station options  */}
               </select>
             </div>
-            <div className="form-check">
-                <input type="checkbox" className="form-check-input" id="reserved" />
-                <label className="form-check-label" htmlFor="reserved">Reserved</label>
-              </div>
           </div>
 
       
@@ -69,8 +57,8 @@ const CreateTrainSchedule = () => {
               <input type="number" className="form-control" id="duration" required />
             </div>
             <div className="mb-3">
-              <label htmlFor="engine" className="form-label">Train Engine</label>
-              <input type="text" className="form-control" id="engine" required />
+              <label htmlFor="duration" className="form-label">Train Engine</label>
+              <input type="number" className="form-control" id="engine" required />
             </div>
             <div className="mb-3">
               <label htmlFor="trainName" className="form-label">Train Name</label>
@@ -86,7 +74,7 @@ const CreateTrainSchedule = () => {
             </div>
           </div>
         </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <button type="submit" className="btn btn-secondary">Submit</button>
       </form>
     </div>
     </div>

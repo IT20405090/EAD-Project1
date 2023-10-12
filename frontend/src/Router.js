@@ -12,6 +12,9 @@ import UpdateTrainSchedule from "./components/Train/UpdateTrainSchedule";
 import LoginPage from "./components/Auth/Login"; // Import LoginPage component
 import RegisterPage from "./components/Auth/Register";
 
+
+import Form12 from "./components/Train/form"
+
 export default function AppRouter() {
   return (
     <div>
@@ -29,6 +32,9 @@ export default function AppRouter() {
           <Route path="/ticket-management" element={<TicketManagement />} />
           <Route path="/ticket-create" element={<CreateTicket />} />
           <Route path="/ticket-update" element={<UpdateTicket />} />
+
+
+          <Route path="/ticket-form" element={< Form12/>} />
         </Routes>
       </Router>
     </div>

@@ -5,9 +5,9 @@
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   font-weight: bold;
-  background-size: cover;
-  -webkit-text-stroke: 2px #210a74;
-  text-stroke: 2px #0e0653;
+  /* background-size: cover; */
+  -webkit-text-stroke: 2px #0a0a0a;
+  text-stroke: 2px #050408;
   
 }
 
@@ -26,3 +26,7 @@
     background-image: url(E:\EAD_project\frontend\src\images\schedule.jpg);
 
 }
+
+
+  
+
