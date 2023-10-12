@@ -7,12 +7,12 @@ const CreateTicket = () => {
       className="bg-light"
       style={{
         minHeight: '100vh',
-        padding: '20px',
+        padding: '3%',
         background: `url(${image})`,
         backgroundSize: 'cover',
       }}
     >
-      <div className="container" style={{ backgroundColor: '#d2b48c', padding: '20px', borderRadius: '10px' }}>
+      <div className="container" style={{ backgroundColor: '#d2b48c', padding: '4%', borderRadius: '2%' }}>
         <h2>Train Ticket Booking</h2>
 
       
