@@ -1,188 +1,49 @@
-import { useNavigate, Link } from "react-router-dom";
+// Navbar.js
 
+import React from "react";
+import { Link } from "react-router-dom";
+import "./navigation.css"; // Adjust the path based on your file structure
 
 const Navbar = () => {
-  const navigate = useNavigate();
-
-  let userRole = localStorage.getItem("userRole");
-
-  const handleSubmit = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("userRole");
-    localStorage.removeItem("user");
-    navigate("/");
-  };
-
   return (
-    <div>
-      <div>
-        <nav className="navbar navbar-dark bg-dark">
-          <div className="container-fluid3">
-            <a className="navbar-brand" href="/">
-              Home
-            </a>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup"
-              aria-controls="navbarNavAltMarkup"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div className="navbar-nav">
-                {/* Traveler pages */}
-                <a
-                  style={{
-                    display: userRole === "Traveler" ? "flex" : "none",
-                    textDecoration: "none",
-                  }}
-                  className="sidebarListItem"
-                  aria-current="page"
-                  href="/"
-                >
-                 
-                </a>
-                <a
-                  style={{
-                    display: userRole === "Traveler" ? "flex" : "none",
-                    textDecoration: "none",
-                  }}
-                  className="sidebarListItem"
-                  href="/"
-                  aria-current="page"
-                >
-                  aaa
-                </a>
-                <a
-                  style={{
-                    display: userRole === "Traveler" ? "flex" : "none",
-                    textDecoration: "none",
-                  }}
-                  className="sidebarListItem"
-                  aria-current="page"
-                  href="/"
-                >
-                  bbbb
-                </a>
-
-                {/*   back office */}
-                <a
-                  style={{
-                    display: userRole === "BackOffice" ? "flex" : "none",
-                    textDecoration: "none",
-                  }}
-                  className="sidebarListItem"
-                  href="/"
-                  aria-current="page"
-                >
-                  vvv
-                </a>
-                <a
-                  style={{
-                    display: userRole === "Backoffice" ? "flex" : "none",
-                    textDecoration: "none",
-                  }}
-                  className="sidebarListItem"
-                  href="/"
-                  aria-current="page"
-                >
-                  ddddddd
-                </a>
-                <a
-                  style={{
-                    display: userRole === "Backoffice" ? "flex" : "none",
-                    textDecoration: "none",
-                  }}
-                  className="sidebarListItem"
-                  href="/"
-                  aria-current="page"
-                >
-                  eeeeee
-                </a>
-                <a
-                  style={{
-                    display: userRole === "Backoffice" ? "flex" : "none",
-                    textDecoration: "none",
-                  }}
-                  className="sidebarListItem"
-                  href="/"
-                  aria-current="page"
-                >
-                  ffffff
-                </a>
-                <a
-                  style={{
-                    display: userRole === "Backoffice" ? "flex" : "none",
-                    textDecoration: "none",
-                  }}
-                  className="sidebarListItem"
-                  href="/"
-                  aria-current="page"
-                >
-                  iiiiiiiiii
-                </a>
-                <a
-                  style={{
-                    display: userRole === "Backoffice" ? "flex" : "none",
-                    textDecoration: "none",
-                  }}
-                  className="sidebarListItem"
-                  href="/"
-                  aria-current="page"
-                >
-                  kkkkkk
-                </a>
-                
-
-                {/*Travel Agent pages*/}
-                <a
-                  style={{
-                    display: userRole === "TravelAgent" ? "flex" : "none",
-                    textDecoration: "none",
-                  }}
-                  className="sidebarListItem"
-                  href="/"
-                  aria-current="page"
-                >
-                  ggg
-                </a>
-               
-              </div>
-            </div>
-          </div>
-          <Link to="/userprofile">
-            <button
-              className="btn btn-secondary"
-              type="submit"
-              style={{
-                float: "right",
-                display: userRole ? "flex" : "none",
-                textDecoration: "none",
-              }}
-            >
-              Profile
-            </button>
-          </Link>
-          <button
-            onClick={handleSubmit}
-            className="btn btn-primary"
-            type="submit"
-            style={{
-              float: "right",
-              marginRight: "10px",
-              display: userRole ? "flex" : "none",
-            }}
-          >
-            {"Logout"}
-          </button>
-        </nav>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div className="container">
+        <Link className="navbar-brand" to="/home">Home</Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item">
+              <Link className="nav-link" to="/train-create">Create a Schedule</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/ticket-create">Book a Ticket</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/activate-account">Activate an Account</Link>
+            </li>
+          </ul>
+        </div>
+        <div className="ml-auto d-flex align-items-center">
+          <button className="btn btn-logout" onClick={handleLogout}>Logout</button>
+        </div>
       </div>
-    </div>
+    </nav>
   );
+};
+
+const handleLogout = () => {
+  // Handle logout logic 
+  console.log("Logout clicked");
 };
 
 export default Navbar;
