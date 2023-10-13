@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import image from '../../images/createTicket.jpeg'
 
 const TicketManagement = () => {
   const ticketData = [
@@ -54,6 +55,17 @@ const TicketManagement = () => {
   };
 
   return (
+
+    <div
+      className="bg-light"
+      style={{
+        minHeight: '100vh',
+        padding: '20px',
+        background: `url(${image})`,
+        backgroundSize: 'cover',
+      }}
+    >
+    <div className="container" style={{ backgroundColor: 'white', padding: '4%' }}>
     <div className="container mt-4">
       <h2 className="display-4 mb-4">Ticket Management</h2>
 
@@ -101,6 +113,9 @@ const TicketManagement = () => {
             ))}
         </tbody>
       </table>
+      </div>
+      <br/><br/><br/><br/><br/><br/><br/>
+    </div>
     </div>
   );
 };
