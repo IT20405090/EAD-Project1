@@ -11,7 +11,7 @@ import UpdateTrainSchedule from "./components/Train/UpdateTrainSchedule";
 
 import LoginPage from "./components/Auth/Login"; // Import LoginPage component
 import RegisterPage from "./components/Auth/Register";
-import ActivatePage from "./components/Auth/Activate";
+import ActivatePage from "./components/Activate";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 

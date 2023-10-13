@@ -26,7 +26,7 @@ const Home = () => {
                                     <Button variant="dark" size="lg" className="quarter-button" style={{ borderRadius: '0' }} href="/train-management">Train Schedule</Button>
                                     <Button variant="dark" size="lg" className="quarter-button" style={{ borderRadius: '0' }} href="/ticket-create">Ticket Booking</Button>
                                     <Button variant="dark" size="lg" className="quarter-button" style={{ borderRadius: '0' }} href="/activate-account">Activate Account</Button>
-                                  
+                                    <Button variant="dark" size="lg" className="quarter-button" style={{ borderRadius: '0' }} href="/ticket-management">View Bookings</Button>
                                 </ButtonGroup>
                             </div>
                             {/* 
