@@ -13,6 +13,7 @@ import PassengerDetails from "./components/Ticket/PassengerDetails";
 
 import LoginPage from "./components/Auth/Login"; // Import LoginPage component
 import RegisterPage from "./components/Auth/Register";
+import ActivatePage from "./components/Activate";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -27,7 +28,7 @@ export default function AppRouter() {
           <Route path="/" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
 
-
+          <Route path="/activate-account" element={<ActivatePage />} />
           <Route path="/home" element={<Home />} />
           <Route path="/train-management" element={<TrainManagement />} />
           <Route path="/train-create" element={<CreateTrainSchedule />} />
