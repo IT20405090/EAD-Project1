@@ -22,62 +22,91 @@ const CreateTrainSchedule = () => {
       <form>
         <div className="row" style={{ textAlign: 'left', color:'gray', fontSize:'20px' }}>
           <div className="col-md-6">
+          
+          <hr/>
+
             <div className="mb-3">
               <label htmlFor="date" className="form-label">Date</label>
-              <input type="text" className="form-control datepicker" id="date" placeholder='Date' required />
+              <input type="text" className="form-control datepicker" id="date" placeholder='Enter the date'  required />
             </div>
+            
             <div className="mb-3">
               <label htmlFor="startTime" className="form-label">Start Time</label>
-              <input type="time" className="form-control" id="startTime" required />
+              <input type="time" className="form-control" id="startTime" placeholder='Enter the startug time' required />
             </div>
+
+            <br/>
+            <hr/>
             <div className="mb-3">
-              <label htmlFor="endTime" className="form-label">End Time</label>
-              <input type="time" className="form-control" id="endTime" required />
+            <label htmlFor="duration" className="form-label">Train Engine</label>
+            <input type="number" className="form-control" id="engine" placeholder='Enter the engine number' required /> 
             </div>
+
             <div className="mb-3">
               <label htmlFor="startingStation" className="form-label">Starting Station</label>
-              <select className="form-select" id="startingStation" required>
+              <select className="form-select" id="startingStation" placeholder='Select the starting station' required>
                 <option value="" disabled selected>Select Starting Station</option>
-                {/* Add  starting station options  */}
+                <option>Gampaha</option>
+                <option>Colombo-Fort</option>
+                <option>Colombo-Maradana</option>
+                <option>Colombo-Dematagoda</option>
               </select>
             </div>
+
             <div className="mb-3">
-              <label htmlFor="endingStation" className="form-label">Ending Station</label>
-              <select className="form-select" id="endingStation" required>
-                <option value="" disabled selected>Select Ending Station</option>
-                {/* Add  ending station options  */}
-              </select>
+              <label htmlFor="trainId" className="form-label">Available Seats</label>
+              <input type="text" className="form-control" id="trainId" placeholder='Enter the available seats count' required />
             </div>
           </div>
 
       
 
           <div className="col-md-6">
+          
+            <hr/>
+
             <div className="mb-3">
               <label htmlFor="duration" className="form-label">Estimated Duration (hours)</label>
-              <input type="number" className="form-control" id="duration" required />
+              <input type="number" className="form-control" id="duration" placeholder='Enter the duration' required />
             </div>
+
             <div className="mb-3">
-              <label htmlFor="duration" className="form-label">Train Engine</label>
-              <input type="number" className="form-control" id="engine" required />
+            <label htmlFor="endTime" className="form-label">End Time</label>
+            <input type="time" className="form-control" id="endTime" placeholder='Enter the ending time' required />
             </div>
+
+            <br/>
+            <hr/>
             <div className="mb-3">
               <label htmlFor="trainName" className="form-label">Train Name</label>
-              <input type="text" className="form-control" id="trainName" required />
+              <input type="text" className="form-control" id="trainName" placeholder='Enter the train name' required />
             </div>
+
             <div className="mb-3">
-              <label htmlFor="trainId" className="form-label">Available Seats</label>
-              <input type="text" className="form-control" id="trainId" required />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="specialNotices" className="form-label">Special Notices</label>
-              <textarea className="form-control" id="specialNotices" rows="4"></textarea>
+            <label htmlFor="endingStation" className="form-label">Ending Station</label>
+              <select className="form-select" id="endingStation" placeholder='Select the ending station' required>
+                <option value="" disabled selected>Select Ending Station</option>
+                <option>Gampaha</option>
+                <option>Colombo-Fort</option>
+                <option>Colombo-Maradana</option>
+                <option>Colombo-Dematagoda</option>
+              </select>
             </div>
           </div>
+
+            
+            <br/>
+            <hr/>
+            <div className="mb-3">
+                <label htmlFor="specialNotices" className="form-label">Special Notices</label>
+                <textarea className="form-control" id="specialNotices" rows="4" placeholder='Type here ...'></textarea>
+              </div>
+
         </div>
+
         <div className="mb-3">
         <Link to="/train-management">
-        <button type="submit" className="btn btn-secondary"style={{ marginRight: '20%' }}>
+        <button type="submit" className="btn btn-secondary" style={{ marginRight: '20%', width: '110px' }}>
             Back
           </button>
         </Link>

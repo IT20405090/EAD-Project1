@@ -9,10 +9,15 @@ import "./form.css"
 
 const Form12 = () => {
 
-    useEffect(() => {
-        // Initialize datepicker when the component mounts
-        $('.datepicker').datepicker();
-      }, []);
+
+  useEffect(() => {
+    // Initialize datepicker when the component mounts
+    $('.datepicker').datepicker();
+    
+
+  
+}, []);
+      
 
 
   return (
@@ -32,8 +37,10 @@ const Form12 = () => {
           <input type="text"  placeholder="Date" className="form__input datepicker" id="date"   required/> 
           <label htmlFor="date" className="form__label">Date</label>
         </div>
+
+       
         <div className="mb-3">
-          <input  placeholder="Time" className="form__input timepicker" id="startTime" />
+          <input  type="time" placeholder="Time" className="form__input timepicker" id="startTime" />
           <label htmlFor="startTime" className="form__label">Start Time</label>
         </div>
         <div className="mb-3">
