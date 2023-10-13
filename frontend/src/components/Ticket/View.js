@@ -12,6 +12,38 @@ const TicketManagement = () => {
       time: '19:00',
       date: '10-11-23'
     },
+    {
+      refID: '573E',
+      busName: 'Econmy 123',
+      to: 'Galle',
+      from: 'Colombo',
+      ticketFare: '$1200',
+      seatNo: '32D',
+      time: '20:00',
+      date: '12-11-23'
+    },
+    {
+      refID: '124D',
+      busName: 'Express 123',
+      to: 'Moratuwa',
+      from: 'Gampaha',
+      ticketFare: '$400',
+      seatNo: '12A',
+      time: '19:00',
+      date: '10-11-23'
+    },
+    {
+      refID: '345E',
+      busName: 'Econmy 123',
+      to: 'Moratuwa',
+      from: 'Colombo',
+      ticketFare: '$100',
+      seatNo: '15C',
+      time: '10:00',
+      date: '02-11-23'
+    },
+    
+
     // Add more train data as needed
   ];
 

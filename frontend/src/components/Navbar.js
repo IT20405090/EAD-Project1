@@ -31,6 +31,9 @@ const Navbar = () => {
             <li className="nav-item">
               <Link className="nav-link" to="/activate-account">Activate an Account</Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/ticket-management">View Bookings</Link>
+            </li>
           </ul>
         </div>
         <div className="ml-auto d-flex align-items-center">
