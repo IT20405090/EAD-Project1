@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js';
-// import scheduleImage from '../../images/schedule.jpg';
 import "./TrainSchedule.css"
 import { Link } from 'react-router-dom';
 
@@ -115,6 +114,7 @@ const CreateTrainSchedule = () => {
           </button>
           
         </div>
+        <br/>
 
       </form>
     </div>

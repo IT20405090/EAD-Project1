@@ -11,7 +11,8 @@ import UpdateTrainSchedule from "./components/Train/UpdateTrainSchedule";
 
 import LoginPage from "./components/Auth/Login"; // Import LoginPage component
 import RegisterPage from "./components/Auth/Register";
-
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 import Form12 from "./components/Train/form"
 
@@ -19,6 +20,7 @@ export default function AppRouter() {
   return (
     <div>
       <Router>
+      <Navbar />
         <Routes>
           <Route path="/" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
@@ -36,6 +38,7 @@ export default function AppRouter() {
 
           <Route path="/ticket-form" element={< Form12/>} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );
