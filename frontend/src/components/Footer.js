@@ -1,12 +1,12 @@
-import React, { Fragment } from "react";
-import { useNavigate , Link} from "react-router-dom";
+import React from "react";
+// import { useNavigate , Link} from "react-router-dom";
 
 
 const Footer = () => {
 
-	const navigate = useNavigate();
+	// const navigate = useNavigate();
 
-	let userRole = localStorage.getItem('userRole');
+	// let userRole = localStorage.getItem('userRole');
 	
 
 	return (

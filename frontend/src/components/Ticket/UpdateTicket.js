@@ -1,14 +1,36 @@
 import React from 'react';
+import image from '../../images/createTicket.jpeg'
+
+// import $ from 'jquery'; // Import jQuery
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import 'bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js';
+import "./Ticket.css"
+import { Link } from 'react-router-dom';
 
 const UpdateTicket = () => {
   return (
-    <div className="container mt-5">
-      <h2>Train Ticket Booking Update Ref ID 01</h2>
+    <div
+      className="bg-light"
+      style={{
+        minHeight: '100vh',
+        padding: '20px',
+        background: `url(${image})`,
+        backgroundSize: 'cover',
+      }}
+    >
+      
+      <div className="container" style={{ backgroundColor: 'white', padding: '4%' }}>
+        <h2 className='Ticket_topic' >Train Ticket Update</h2>
+        <br/>
+
       
       <form>
-        <h3>Journey Details</h3>
-        <div className="row">
+        <h3> Edit The Journey Details </h3>
+        <div className="row" style={{ textAlign: 'left', color:'gray', fontSize:'20px' }}>
             <center>
+              <br/>
           <div className="col-md-7">
             <div className="form-group">
               <label htmlFor="date">Date</label>
@@ -22,197 +44,49 @@ const UpdateTicket = () => {
               <label htmlFor="startingPoint">Starting Point</label>
               <select id="startingPoint" className="form-select" required>
                 <option value="" disabled selected>Select Starting Point</option>
-                {/* Add starting point options  */}
+                <option>Gampaha</option>
+                <option>Colombo-Fort</option>
+                <option>Colombo-Maradana</option>
+                <option>Colombo-Dematagoda</option>
               </select>
             </div>
             <div className="form-group">
               <label htmlFor="endingPoint">Ending Point</label>
               <select id="endingPoint" className="form-select" required>
                 <option value="" disabled selected>Select Ending Point</option>
-                {/* Add ending point options */}
+                <option>Gampaha</option>
+                <option>Colombo-Fort</option>
+                <option>Colombo-Maradana</option>
+                <option>Colombo-Dematagoda</option>
               </select>
             </div>
             <br/>
+            <div className="mb-3">
+            <label htmlFor="search" className="visually-hidden">Search</label>
+            <input type="text" id="search" className="form-control" placeholder="Search Trains" />
+          </div>
             <div className="form-group">
               <button type="button" className="btn btn-primary">Search Trains</button>
             </div>
           </div>
           </center>
 
+          <div>
+          <Link to="/home">
+          <button type="button" class="btn btn-secondary" style={{width:'100px'}} >Back  </button>
+          </Link>
 
-          <center>
-          <div className="col-md-7"><br/><br/><br/>
-            <h3>Passenger 1 Details</h3>
-            <div className="form-group">
-              <label htmlFor="name1">Name</label>
-              <input type="text" id="name1" className="form-control" required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="nic1">NIC</label>
-              <input type="text" id="nic1" className="form-control" required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="age1">Age</label>
-              <input type="number" id="age1" className="form-control" required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="sex1">Sex</label>
-              <select id="sex1" className="form-select" required>
-                <option value="" disabled selected>Select Sex</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-              </select>
-            </div>
-            <div className="form-group">
-              <label htmlFor="berth1">Berth Choice</label>
-              <select id="berth1" className="form-select" required>
-                <option value="" disabled selected>Select Berth</option>
-                {/* Add berth choices  */}
-              </select>
-            </div>
-            <div className="form-group">
-              <label htmlFor="contactNumber1">Contact Number</label>
-              <input type="tel" id="contactNumber1" className="form-control" required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="email1">Email</label>
-              <input type="email" id="email1" className="form-control" required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="seatNumber1">Seat Number</label>
-              <input type="text" id="seatNumber1" className="form-control" readOnly />
-            </div>
+          <Link to="/#">
+          <button type="button" class="btn btn-warning" style={{marginLeft: '80%'}} >Update</button>
+          </Link>
+
           </div>
-          </center>
-
-          <center>
-          <div className="col-md-7"><br/><br/><br/>
-            <h3>Passenger 2 Details</h3>
-            <div className="form-group">
-              <label htmlFor="name1">Name</label>
-              <input type="text" id="name1" className="form-control" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="age1">Age</label>
-              <input type="number" id="age1" className="form-control" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="sex1">Sex</label>
-              <select id="sex1" className="form-select" >
-                <option value="" disabled selected>Select Sex</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-              </select>
-            </div>
-            <div className="form-group">
-              <label htmlFor="berth1">Berth Choice</label>
-              <select id="berth1" className="form-select" >
-                <option value="" disabled selected>Select Berth</option>
-                {/* Add  berth choices  */}
-              </select>
-            </div>
-            <div className="form-group">
-              <label htmlFor="contactNumber1">Contact Number</label>
-              <input type="tel" id="contactNumber1" className="form-control" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="email1">Email</label>
-              <input type="email" id="email1" className="form-control" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="seatNumber1">Seat Number</label>
-              <input type="text" id="seatNumber1" className="form-control" readOnly />
-            </div>
-          </div>
-          </center>
-
-          <center>
-          <div className="col-md-7"><br/><br/><br/>
-            <h3>Passenger 3 Details</h3>
-            <div className="form-group">
-              <label htmlFor="name1">Name</label>
-              <input type="text" id="name1" className="form-control"  />
-            </div>
-            <div className="form-group">
-              <label htmlFor="age1">Age</label>
-              <input type="number" id="age1" className="form-control" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="sex1">Sex</label>
-              <select id="sex1" className="form-select" >
-                <option value="" disabled selected>Select Sex</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-              </select>
-            </div>
-            <div className="form-group">
-              <label htmlFor="berth1">Berth Choice</label>
-              <select id="berth1" className="form-select" >
-                <option value="" disabled selected>Select Berth</option>
-                {/* Add  berth choices  */}
-              </select>
-            </div>
-            <div className="form-group">
-              <label htmlFor="contactNumber1">Contact Number</label>
-              <input type="tel" id="contactNumber1" className="form-control"  />
-            </div>
-            <div className="form-group">
-              <label htmlFor="email1">Email</label>
-              <input type="email" id="email1" className="form-control"  />
-            </div>
-            <div className="form-group">
-              <label htmlFor="seatNumber1">Seat Number</label>
-              <input type="text" id="seatNumber1" className="form-control" readOnly />
-            </div>
-          </div>
-          </center>
-
-          <center>
-          <div className="col-md-7"><br/><br/><br/>
-            <h3>Passenger 4 Details</h3>
-            <div className="form-group">
-              <label htmlFor="name1">Name</label>
-              <input type="text" id="name1" className="form-control"  />
-            </div>
-            <div className="form-group">
-              <label htmlFor="age1">Age</label>
-              <input type="number" id="age1" className="form-control"  />
-            </div>
-            <div className="form-group">
-              <label htmlFor="sex1">Sex</label>
-              <select id="sex1" className="form-select" >
-                <option value="" disabled selected>Select Sex</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-              </select>
-            </div>
-            <div className="form-group">
-              <label htmlFor="berth1">Berth Choice</label>
-              <select id="berth1" className="form-select" >
-                <option value="" disabled selected>Select Berth</option>
-                {/* Add  berth choices  */}
-              </select>
-            </div>
-            <div className="form-group">
-              <label htmlFor="contactNumber1">Contact Number</label>
-              <input type="tel" id="contactNumber1" className="form-control"  />
-            </div>
-            <div className="form-group">
-              <label htmlFor="email1">Email</label>
-              <input type="email" id="email1" className="form-control"  />
-            </div>
-            <div className="form-group">
-              <label htmlFor="seatNumber1">Seat Number</label>
-              <input type="text" id="seatNumber1" className="form-control" readOnly />
-            </div>
-          </div>
-          </center>
-
 
         </div>
-        <br/>
-        <button type="submit" className="btn btn-primary">Update</button>
+        
+      
       </form>
+    </div>
     </div>
   );
 };
