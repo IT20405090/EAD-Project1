@@ -13,7 +13,7 @@ const Home = () => {
             <br /> <br />
             <div className="buttons">
                 <div>
-                <img className="home-image" src="/images/home1.gif" alt="Me" width="1680" height="500" />   <div className="header">
+                <img className="home-image" src="/images/home1.gif" alt="Me" width="1500" height="500" />   <div className="header">
                         <Container>
                             <h5>Seamless Travel Experiences Await You, Empowering Your Journeys: Introducing the Next Generation Ticket Reservation System</h5>
                         </Container>
