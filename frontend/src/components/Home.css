@@ -1,3 +1,4 @@
+/* Global styles for the entire page */
 body, html {
   height: 100%;
   margin: 0;
@@ -5,6 +6,7 @@ body, html {
   color: #867f7f;
 }
 
+/* Header styles */
 .header {
   text-align: center;
   background-color: #333;
@@ -14,24 +16,24 @@ body, html {
   padding-top: 1%;
 }
 
-
-
+/* Main content container */
 .content {
   position: relative;
   height: 100%; /* Added height to ensure full height */
   background-color: #867f7f;
 }
 
+/* Styles for homepage images */
 .home-image {
- 
   margin-top: -6%;
-  
 }
 
-.homepage{
+/* Homepage background */
+.homepage {
   background-color: #d8d8d8;
 }
 
+/* Multicolor text with gradient background */
 .multicolor-text {
   text-align: center;
   font-size: 70px;
@@ -43,26 +45,17 @@ body, html {
   rgb(85, 35, 52),
   rgb(145, 35, 35),
   rgb(192, 49, 49));
-  /* background: linear-gradient(to left,
-    rgb(29, 3, 71),
-    rgb(9, 0, 130),
-    blue,
-    rgb(187, 184, 29),
-    rgb(17, 150, 117),
-    rgb(9, 112, 49),
-    rgb(1, 54, 29)); */
   -webkit-background-clip: text;
   color: transparent;
-
 }
 
+/* Styles for the home section */
 .home {
-  /* background-image: linear-gradient(rgb(197, 228, 243), rgb(245, 247, 245)); */
   background-image: linear-gradient(rgb(179, 177, 177), rgb(238, 236, 236));
   height: 100px;
 }
 
-
+/* Styles for cards */
 .card {
   background-color: rgba(48, 47, 47, 0.5); /* Adjusted alpha value for transparency */
   border-radius: 10px;
@@ -77,13 +70,14 @@ body, html {
   max-width: 600px;
 }
 
-
+/* Button container styles */
 .button-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
+/* Quarter button styles */
 .quarter-button {
   width: 48%;
   margin: 1%;

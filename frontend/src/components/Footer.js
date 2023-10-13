@@ -1,12 +1,9 @@
 import React from "react";
-// import { useNavigate , Link} from "react-router-dom";
+
 
 
 const Footer = () => {
 
-	// const navigate = useNavigate();
-
-	// let userRole = localStorage.getItem('userRole');
 	
 
 	return (

@@ -8,7 +8,10 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
+        {/* Logo or site title linked to the home page */}
         <Link className="navbar-brand" to="/home">Home</Link>
+
+        {/* Navbar toggle button for mobile devices */}
         <button
           className="navbar-toggler"
           type="button"
@@ -20,23 +23,31 @@ const Navbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
+
+        {/* Navbar links */}
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
+              {/* Link to the "Create a Schedule" page */}
               <Link className="nav-link" to="/train-create">Create a Schedule</Link>
             </li>
             <li className="nav-item">
+              {/* Link to the "Book a Ticket" page */}
               <Link className="nav-link" to="/ticket-create">Book a Ticket</Link>
             </li>
             <li className="nav-item">
+              {/* Link to the "Activate an Account" page */}
               <Link className="nav-link" to="/activate-account">Activate an Account</Link>
             </li>
             <li className="nav-item">
+              {/* Link to the "View Bookings" page */}
               <Link className="nav-link" to="/ticket-management">View Bookings</Link>
             </li>
           </ul>
         </div>
+        
         <div className="ml-auto d-flex align-items-center">
+          {/* Button to handle logout */}
           <button className="btn btn-logout" onClick={handleLogout}>Logout</button>
         </div>
       </div>

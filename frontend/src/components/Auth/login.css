@@ -1,103 +1,96 @@
-/* login.css */
-
-/* Style the card */
+/* Style the login card */
 .card1 {
-  background-color: rgba(48, 47, 47, 0.5); /* Adjusted alpha value for transparency */
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 5%;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  margin-top: 0%;
-  max-width: 600px;
-  color: #fff;
+  background-color: rgba(48, 47, 47, 0.5); /* Transparent background with some opacity */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  padding: 5%; /* Padding inside the card */
+  position: fixed; /* Fixed position on the screen */
+  top: 50%; /* Centered vertically */
+  left: 50%; /* Centered horizontally */
+  transform: translate(-50%, -50%); /* Centered in the viewport */
+  width: 80%; /* Card width */
+  margin-top: 0%; /* No top margin */
+  max-width: 600px; /* Maximum card width */
+  color: #fff; /* Text color */
 }
 
-/* Card header style */
+/* Styling for the card header */
 .card-header1 {
-  background-color: #007bff;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  border-radius: 5px 5px 0 0;
+  background-color: #007bff; /* Blue background */
+  color: #fff; /* Text color */
+  text-align: center; /* Centered text */
+  padding: 10px; /* Padding inside the header */
+  border-radius: 5px 5px 0 0; /* Rounded top corners */
 }
 
-/* Form style */
+/* Styling for form groups */
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Spacing between form groups */
 }
 
-/* Label style */
+/* Styling for form labels */
 .form-label {
-  font-weight: bold;
+  font-weight: bold; /* Bold text */
 }
 
-/* Input style */
+/* Styling for form inputs */
 .form-control {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding inside inputs */
+  border: 1px solid #ccc; /* Border with a light gray color */
+  border-radius: 3px; /* Slightly rounded corners */
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Smooth transition on focus */
 }
 
 .form-control:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  border-color: #007bff; /* Blue border on focus */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Focus shadow effect */
 }
 
-/* Button style */
+/* Primary button style */
 .btn-primary {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  padding: 10px 30px;
-  cursor: pointer;
+  background-color: #007bff; /* Blue background */
+  color: #fff; /* Text color */
+  border: none; /* No border */
+  border-radius: 3px; /* Slightly rounded corners */
+  padding: 10px 30px; /* Padding inside the button */
+  cursor: pointer; /* Cursor style */
 }
 
-/* Button style */
+/* Secondary button style */
 .btn-secondary {
-  border: none;
-  border-radius: 3px;
-  padding: 10px 20px;
-  cursor: pointer;
+  border: none; /* No border */
+  border-radius: 3px; /* Slightly rounded corners */
+  padding: 10px 20px; /* Padding inside the button */
+  cursor: pointer; /* Cursor style */
 }
 
+/* Warning button style */
 .btn-warning {
-  border: none;
-  border-radius: 3px;
-  padding: 10px 20px;
-  cursor: pointer;
+  border: none; /* No border */
+  border-radius: 3px; /* Slightly rounded corners */
+  padding: 10px 20px; /* Padding inside the button */
+  cursor: pointer; /* Cursor style */
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Darker blue background on hover */
 }
 
+/* Styling for the login background */
 .login-background {
-  background-image: url('../../images/login.jpeg');
-  background-size: cover;
-  /* filter: contrast(50%); */
-  height: 170%; /* Adjusted height */
-  position: fixed;
-  width: 100%;
-  /* margin-top: -14%; */
-  
-  
-  
+  background-image: url('../../images/login.jpeg'); /* Background image */
+  background-size: cover; /* Cover the entire element */
+  height: 170%; /* Adjusted height for a taller background */
+  position: fixed; /* Fixed position on the screen */
+  width: 100%; /* Full width */
 }
-
-
 
 .btn-secondary:hover {
-  background-color: #545b62;
+  background-color: #545b62; /* Darker background on hover */
 }
 
-/* Spacing between buttons */
+/* Spacing between adjacent buttons */
 .btn + .btn {
-  margin-left: 10px;
+  margin-left: 10px; /* Space between buttons */
 }

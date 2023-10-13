@@ -1,12 +1,12 @@
 import React from 'react';
-import image from '../../images/createTicket.jpeg'
+import image from '../../images/createTicket.jpeg';
 
-// import $ from 'jquery'; // Import jQuery
+// Import necessary libraries and CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js';
-import "./Ticket.css"
+import "./Ticket.css"; // Import the custom CSS file
 import { Link } from 'react-router-dom';
 
 const UpdateTicket = () => {

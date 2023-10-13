@@ -4,22 +4,28 @@ import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './login.css'; // Import the custom CSS file
 
-
+// Define the LoginPage component
 const LoginPage = () => {
+  // Initialize state for username and password
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate(); // Import useNavigate from react-router-dom
 
+  // Get the navigation function from react-router-dom
+  const navigate = useNavigate();
+
+  // Handle changes in the username input
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
   };
 
+  // Handle changes in the password input
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
 
+  // Handle the login action
   const handleLogin = () => {
-    // For simplicity, just log the entered username and password for now
+    // For simplicity, log the entered username and password
     console.log('Username:', username);
     console.log('Password:', password);
     // Add your authentication logic here (e.g., call an API, validate against a database)
@@ -28,27 +34,22 @@ const LoginPage = () => {
     navigate('/home');
   };
 
+  // Handle the registration action
   const handleRegister = () => {
-
-
-    // If authentication is successful, navigate to the Home page
+    // If registration is successful, navigate to the Registration page
     navigate('/Register');
   };
 
   return (
-   
+    // Render the login page
     <div className="login-background">
       <div className="row justify-content-center">
         <div className="col-md-6">
-      
           <div className="card1">
-          
             <div className="card-header1">
-            
               <h3>Login</h3>
             </div>
             <div className="card-body1">
-            
               <form>
                 {/* Username Input */}
                 <br/>
@@ -76,8 +77,6 @@ const LoginPage = () => {
                     value={password}
                     onChange={handlePasswordChange}
                   />
-
-                  
                 </div>
                 {/* Login Button */}
                 <button
@@ -85,7 +84,7 @@ const LoginPage = () => {
                   className="btn btn-primary"
                   onClick={handleLogin}
                 >
-                  Login  
+                  Login
                 </button>
 
                 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -107,4 +106,5 @@ const LoginPage = () => {
   );
 };
 
+// Export the LoginPage component
 export default LoginPage;

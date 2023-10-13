@@ -4,7 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './register.css'; // Import the custom CSS file
 
+// Define the RegisterPage component
 const RegisterPage = () => {
+  // Initialize state for form fields and password match error
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [mobileNumber, setMobileNumber] = useState('');
@@ -12,36 +14,45 @@ const RegisterPage = () => {
   const [password, setPassword] = useState('');
   const [reenterPassword, setReenterPassword] = useState('');
   const [passwordMatchError, setPasswordMatchError] = useState(false);
-  const navigate = useNavigate(); // Import useNavigate from react-router-dom
 
+  // Get the navigation function from react-router-dom
+  const navigate = useNavigate();
+
+  // Handle changes in the username input
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
   };
 
+  // Handle changes in the email input
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
 
+  // Handle changes in the mobile number input
   const handleMobileNumberChange = (e) => {
     setMobileNumber(e.target.value);
   };
 
+  // Handle changes in the address input
   const handleAddressChange = (e) => {
     setAddress(e.target.value);
   };
 
+  // Handle changes in the password input
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
     // Check if the passwords match
     setPasswordMatchError(e.target.value !== reenterPassword);
   };
 
+  // Handle changes in the reenter password input
   const handleReenterPasswordChange = (e) => {
     setReenterPassword(e.target.value);
     // Check if the passwords match
     setPasswordMatchError(e.target.value !== password);
   };
 
+  // Handle the registration action
   const handleRegister = () => {
     // Frontend validation: Check if passwords match
     if (password !== reenterPassword) {
@@ -50,7 +61,7 @@ const RegisterPage = () => {
       return; // Do not proceed with registration
     }
 
-    // log the entered data 
+    // Log the entered data 
     console.log('Username:', username);
     console.log('Email:', email);
     console.log('Mobile Number:', mobileNumber);
@@ -64,7 +75,10 @@ const RegisterPage = () => {
   };
 
   return (
+    // Render the registration page
+   
     <div className="register-background">
+     
       <div className="row justify-content-center">
         <div className="col-md-8">
           <div className="card3">
@@ -192,4 +206,5 @@ const RegisterPage = () => {
   );
 };
 
+// Export the RegisterPage component
 export default RegisterPage;

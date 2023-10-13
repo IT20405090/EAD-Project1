@@ -1,4 +1,4 @@
-
+/* Reset default margin, padding, and text decoration for all elements */
 *,
 *::before,
 *::after {
@@ -8,6 +8,7 @@
   text-decoration: none;
 }
 
+/* Container for the ticket form */
 .containerTicketForm {
   width: 100%;
   max-width: 768px;
@@ -19,6 +20,7 @@
   background-color: #D8DBCE;
 }
 
+/* Responsive layout for larger screens */
 @media (min-width: 768px) {
   .containerTicketForm {
     flex-direction: row;
@@ -26,11 +28,13 @@
   }
 }
 
+/* Call to action (CTA) form section */
 .cta-form {
   margin-bottom: 2rem;
   text-align: center;
 }
 
+/* Responsive layout for larger screens */
 @media (min-width: 768px) {
   .cta-form {
     margin-bottom: 0;
@@ -39,12 +43,12 @@
   }
 }
 
-
-
+/* Form styles */
 .form {
   align-self: center;
 }
 
+/* Form input styles */
 .form__input {
   width: clamp(120px, 50vw, 420px);
   height: 2.5rem;
@@ -55,24 +59,27 @@
   transition: all 250ms;
 }
 
+/* Responsive input width for larger screens */
 @media (min-width: 768px) {
   .form__input {
     width: clamp(120px, 35vw, 420px);
   }
 }
 
+/* Form input focus styles */
 .form__input:focus {
   outline: none;
   border-top-color: rgba(0, 0, 0, 0.1);
 }
 
+/* Form input label styles for focus and when input is not empty */
 .form__input:focus + .form__label,
-
 .form__input:not(:placeholder-shown) + .form__label {
   transform: translateY(-4.50rem) scale(1);
   color: #303030;
 }
 
+/* Hide the input placeholder text */
 .form__input::placeholder {
   display: none;
   color: transparent;
@@ -82,10 +89,12 @@
   text-align: left;
 }
 
+/* Highlight the top border of the input when focused or not empty */
 .form__input:not(:placeholder-shown) {
   border-top-color: rgba(0, 0, 0, 0.5);
 }
 
+/* Form input label styles */
 .form__label {
   font-size: 1rem;
   color: #909090;
@@ -100,40 +109,32 @@
   pointer-events: none;
 }
 
-/* //date picker */
-
-/* Style for the date input field */
+/* Date picker input styles */
+/* Your date input field styles here */
 .form__input.datepicker {
-    /* Your date input field styles here */
-  }
-  
-  /* Style for the label associated with the date input */
-  .form__label[for="date"] {
-    /* Your label styles here */
-  }
-  
-  /* Add custom styles to make it look like a date picker */
-  .form__input.datepicker {
-    /* background: url('calendar-icon.png') no-repeat right center; */
-    background-size: 24px 24px;
-    padding-right: 36px; /* Make room for the calendar icon */
-    cursor: pointer;
-  }
-  
-  /* Styling the calendar icon, you can use your own image or a CSS-only icon */
-  .form__input.datepicker::after {
-    content: '\1F4C5'; /* Unicode for calendar icon */
-    font-size: 24px;
-    position: absolute;
-    right: 8px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;
-  }
-  
-  /* Hide the default date input arrow in some browsers */
-  .form__input.datepicker::-webkit-inner-spin-button,
-  .form__input.datepicker::-webkit-calendar-picker-indicator {
-    display: none;
-  }
+  background-size: 24px 24px;
+  padding-right: 36px; /* Make room for the calendar icon */
+  cursor: pointer;
+}
 
+/* Label styles for the date input */
+.form__label[for="date"] {
+  /* Your label styles here */
+}
+
+/* Styling the calendar icon, you can use your own image or a CSS-only icon */
+.form__input.datepicker::after {
+  content: '\1F4C5'; /* Unicode for calendar icon */
+  font-size: 24px;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Hide the default date input arrow in some browsers */
+.form__input.datepicker::-webkit-inner-spin-button,
+.form__input.datepicker::-webkit-calendar-picker-indicator {
+  display: none;
+}

@@ -1,15 +1,18 @@
 import React from 'react';
-import image from '../../images/createTicket.jpeg'
-import image2 from '../../images/berth.png'
+import image from '../../images/createTicket.jpeg';
+import image2 from '../../images/berth.png';
 import { Carousel, Form, Button } from 'react-bootstrap';
 
-// import $ from 'jquery'; // Import jQuery
+// Import Bootstrap styles and JavaScript
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js';
+
+// Import custom CSS file for this component
 import "./Ticket.css"
-// import { Link } from 'react-router-dom';
+
+// Define the PassengerDetails component
 
 const PassengerDetails = () => {
   return (

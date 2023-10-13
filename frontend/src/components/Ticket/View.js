@@ -3,6 +3,7 @@ import image from '../../images/createTicket.jpeg'
 import { Link } from 'react-router-dom';
 
 const TicketManagement = () => {
+  // Define sample ticket data
   const ticketData = [
     {
       refID: '123D',
@@ -49,8 +50,10 @@ const TicketManagement = () => {
     // Add more train data as needed
   ];
 
+  // State to store the search term
   const [searchTerm, setSearchTerm] = useState('');
 
+  // Event handler for search input
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
   };
