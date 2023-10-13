@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import image from '../../images/createTicket.jpeg'
+import { Link } from 'react-router-dom';
 
 const TicketManagement = () => {
   const ticketData = [
@@ -92,6 +93,7 @@ const TicketManagement = () => {
             <th>Seat No</th>
             <th>Time</th>
             <th>Date</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -109,6 +111,11 @@ const TicketManagement = () => {
                 <td>{ticket.seatNo}</td>
                 <td>{ticket.time}</td>
                 <td>{ticket.date}</td>
+                <td> <Link to="/ticket-update"><button type="button" class="btn btn-warning"><i className="fas fa-edit"></i>&nbsp; Update</button></Link>
+                &nbsp; <Link to="/#"><button type="button" class="btn btn-danger"><i className ="far fa-trash-alt"> </i>&nbsp; Delete</button></Link></td>
+                
+                
+                
               </tr>
             ))}
         </tbody>

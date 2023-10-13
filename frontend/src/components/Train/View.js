@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Button } from 'react-bootstrap';
 import trainImage from '../../images/manage.jpg';
+import { Link } from 'react-router-dom';
 
 const TrainManagement = () => {
   const trainData = [
@@ -111,6 +112,7 @@ const TrainManagement = () => {
               <th>Available Seats</th>
               <th>Reserved/Not</th>
               <th>Notices</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -134,6 +136,9 @@ const TrainManagement = () => {
                     )}
                   </td>
                   <td>{train.note}</td>
+                  <td> <Link to="/train-update"><button type="button" class="btn btn-warning"><i className="fas fa-edit"></i>&nbsp; Update</button></Link>
+                  &nbsp; <Link to="/#"><button type="button" class="btn btn-danger"><i className ="far fa-trash-alt"> </i>&nbsp; Delete</button></Link></td>
+                
                 </tr>
               ))}
           </tbody>
