@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
+import { Container, Button } from 'react-bootstrap';
 import "./navigation.css"; // Adjust the path based on your file structure
 
 const Navbar = () => {
@@ -45,11 +46,20 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
+
+        <div className="ml-auto d-flex align-items-center">
+          {/* Button to handle user profile */}
+
+           <Button className="btn btn-secondary"  href="/Update-user-profile">User Profile</Button>
+                               
+        </div>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         
         <div className="ml-auto d-flex align-items-center">
           {/* Button to handle logout */}
           <button className="btn btn-logout" onClick={handleLogout}>Logout</button>
         </div>
+
       </div>
     </nav>
   );

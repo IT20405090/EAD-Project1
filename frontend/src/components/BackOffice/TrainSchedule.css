@@ -1,0 +1,49 @@
+/* Styling for .TrainScehdule_topic class */
+.TrainScehdule_topic {
+    /* Background image for the element */
+    background: url('../../images/schedule.jpg') -20px -20px no-repeat;
+    font-size: 70px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-weight: bold;
+    -webkit-text-stroke: 2px #0a0a0a;
+    text-stroke: 2px #050408;
+  }
+  
+  /* Styling for elements with class .bg-light1 */
+  .bg-light1 {
+    min-height: 130vh;
+    padding: 20px;
+    max-width: 1500px;
+    margin: auto;
+    background-color: rgb(245, 245, 245);
+  }
+  
+  /* Styling for .container-fluid class */
+  .container-fluid {
+    min-height: 100vh;
+    padding: 20px;
+    background-size: cover;
+    background-position: left;
+    background-image: url('../../images/schedule.jpg');
+  }
+  
+  /* Styling for .UpdateScehdule_topic class */
+  .UpdateScehdule_topic {
+    font-size: 70px;
+    font-weight: bold;
+    background-size: cover;
+    -webkit-text-stroke: 2px #0a0a0a;
+    text-stroke: 2px #050408;
+  }
+  
+  /* Styling for elements with class .container-fluid2 */
+  .container-fluid2 {
+    min-height: 100vh;
+    padding: 20px;
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    background: url('../../images/sheduleUpdate.jpeg');
+  }
+  
