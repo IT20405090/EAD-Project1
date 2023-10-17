@@ -14,7 +14,7 @@ import "./Ticket.css"
 
 // Define the PassengerDetails component
 
-const PassengerDetails = () => {
+const UpdatePassengerDetails = () => {
   return (
     <div
       className="bg-light"
@@ -257,7 +257,7 @@ const PassengerDetails = () => {
      
     </Form>
 
-          <button type="submit" className="btn btn-primary" >
+          <button type="Update" className="btn btn-primary" >
             Submit
           </button>
 
@@ -267,4 +267,4 @@ const PassengerDetails = () => {
   );
 };
 
-export default PassengerDetails;
+export default UpdatePassengerDetails;
