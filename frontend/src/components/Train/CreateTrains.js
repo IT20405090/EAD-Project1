@@ -27,10 +27,16 @@ const TrainFormPage = () => {
     <div className="train-form-container">
       {/* Left side with form */}
       <div className="train-form-container-left d-flex align-items-center justify-content-center">
-        <div className="train-form">
+        
+        <div className="train-form" style={{  backgroundColor: 'rgba(255, 255, 255, 0.8)'}}>
+        <br/> <br/> 
           <h2>Addition of New Trains</h2>
+          <br/> 
+          <center>
           <form onSubmit={handleSubmit}>
-            <div className="mb-3">
+            
+            <div className="mb-3" style={{width:'450px'}}>
+              
               <label htmlFor="trainName" className="form-label">
                 Name of the Train Engine
               </label>
@@ -42,7 +48,7 @@ const TrainFormPage = () => {
                 onChange={handleTrainNameChange}
               />
             </div>
-            <div className="mb-3">
+            <div className="mb-3" style={{width:'450px'}}>
               <label htmlFor="trainState" className="form-label">
                 State of the Train
               </label>
@@ -66,6 +72,7 @@ const TrainFormPage = () => {
               </button>
             </div>
           </form>
+          </center>
         </div>
       </div>
 
