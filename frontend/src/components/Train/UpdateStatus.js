@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './createtrains.css'; // Import the CSS file for styling
 
-const TrainFormPage = () => {
+const TrainStatusPage = () => {
   const [trainName, setTrainName] = useState('');
   const [trainState, setTrainState] = useState('');
   const navigate = useNavigate(); // Import useNavigate from react-router-dom
@@ -34,7 +34,7 @@ const TrainFormPage = () => {
       <div className="train-form-container-left d-flex align-items-center justify-content-center">
         <div className="train-form" style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)' }}>
           <br /> <br />
-          <h2>Addition of New Trains</h2>
+          <h2>Update Train Status</h2>
           <br />
           <center>
             <form onSubmit={handleSubmit}>
@@ -67,7 +67,7 @@ const TrainFormPage = () => {
               </div>
               <div className="mb-3">
                 <button type="submit" className="btn btn-primary me-2">
-                  Submit
+                  Update
                 </button>
                 <button type="button" className="btn btn-secondary" onClick={handleViewTrains}>
                   View Trains
@@ -84,4 +84,4 @@ const TrainFormPage = () => {
   );
 };
 
-export default TrainFormPage;
+export default TrainStatusPage;
