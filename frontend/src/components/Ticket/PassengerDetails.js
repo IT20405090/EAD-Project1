@@ -28,24 +28,26 @@ const PassengerDetails = () => {
     >
         
 
-      <div className="container" style={{ backgroundColor: 'white', padding: '4%' }}>
+    <div className="container" style={{ backgroundColor: 'white', padding: '4%', maxWidth:'900px' }}>
 
     <Form>
       <h1 className="PassengerDetails_topic">Passenger Details</h1>
       <div
-        className="bg-light"
+        className="bg-light9"
         style={{
             minHeight: '100vh',
             padding: '2%',
             background: `url(${image2})`,
             // backgroundSize: 'auto',  // Set the background size to auto
-            maxwidth:'100%',
+            maxwidth:'10px',
             backgroundRepeat: 'no-repeat',  // Prevent image repetition
             backgroundPosition: 'center',  // Center the image
             // width: '100%',  // Adjust the width to control the image size
             margin: '0 auto'  // Center the image horizontally
         }}
-></div>
+        >
+
+        </div>
    
       <Carousel>
         <Carousel.Item>

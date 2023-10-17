@@ -9,7 +9,9 @@
 /* Custom style for carousel control buttons */
 .carousel-control-prev,
 .carousel-control-next {
-  background-color: rgb(160, 160, 248); /* Background color for carousel control buttons (adjust as needed) */
+  /* background-color: rgb(160, 160, 248); Background color for carousel control buttons (adjust as needed) */
+  max-height: 50px;
+  align-items: center;
 }
 
 /* PassengerDetails topic style */
