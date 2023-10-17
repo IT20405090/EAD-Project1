@@ -4,8 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './createtrains.css'; // Import the CSS file for styling
 
 const TrainFormPage = () => {
-  const [trainName, setTrainName] = useState('');
-  const [trainState, setTrainState] = useState('');
+  const [name, setTrainName] = useState('');
+  const [status, setTrainState] = useState('');
   const navigate = useNavigate(); // Import useNavigate from react-router-dom
 
   const handleTrainNameChange = (e) => {
@@ -16,13 +16,40 @@ const TrainFormPage = () => {
     setTrainState(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add your form submission logic here
-    console.log('Train Name:', trainName);
-    console.log('Train State:', trainState);
+  
+    // Convert the status to a boolean based on the dropdown selection
+    const statusValue = status === 'active' ? true : false;
+  
+    // Create an object to represent the data you want to send to the API
+    const data = {
+      name: name,
+      status: statusValue,
+    };
+  
+    try {
+      const response = await fetch('https://localhost:7261/api/Train', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+  
+      if (response.ok) {
+        // Request was successful, you can add additional logic here
+        console.log('Train added successfully');
+        navigate('/train-view'); // Navigate to the view page
+      } else {
+        // Handle errors
+        console.error('Failed to add train');
+      }
+    } catch (error) {
+      console.error('An error occurred:', error);
+    }
   };
-
+  
   const handleViewTrains = () => {
     // Navigate to '/train-view' when "View Trains" button is clicked
     navigate('/train-view');
@@ -46,7 +73,7 @@ const TrainFormPage = () => {
                   type="text"
                   className="form-control"
                   id="trainName"
-                  value={trainName}
+                  value={name}
                   onChange={handleTrainNameChange}
                 />
               </div>
@@ -57,7 +84,7 @@ const TrainFormPage = () => {
                 <select
                   className="form-select"
                   id="trainState"
-                  value={trainState}
+                  value={status}
                   onChange={handleTrainStateChange}
                 >
                   <option value="">Select Train State</option>
@@ -66,8 +93,8 @@ const TrainFormPage = () => {
                 </select>
               </div>
               <div className="mb-3">
-                <button type="submit" className="btn btn-primary me-2">
-                  Submit
+                <button type="submit" className="btn btn-primary me-2" >
+                  Add Train
                 </button>
                 <button type="button" className="btn btn-secondary" onClick={handleViewTrains}>
                   View Trains
