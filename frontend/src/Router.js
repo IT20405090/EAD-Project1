@@ -52,7 +52,7 @@ export default function AppRouter() {
           <Route path="/train-create" element={<CreateTrainSchedule />} />
           <Route path="/train-update" element={<UpdateTrainSchedule />} />
           <Route path="/train-view" element={<TrainsView />} />
-          <Route path="/train-status" element={<TrainStatusPage />} />
+          <Route path="/train-status/:id" element={<TrainStatusPage />} />
 
           <Route path="/ticket-management" element={<TicketManagement />} />
           <Route path="/ticket-create" element={<CreateTicket />} />
