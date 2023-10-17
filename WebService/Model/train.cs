@@ -5,17 +5,14 @@ namespace TravelWebService.Model
 {
     public class train
     {
-
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string? Id { get; set; }
 
-        [BsonElement("Name")]
+        [BsonElement("name")]
         public string Name { get; set; } = string.Empty;
 
-        
-
-       
-
+        [BsonElement("status")]
+        public bool Status { get; set; }
     }
 }
