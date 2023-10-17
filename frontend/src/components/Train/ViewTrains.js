@@ -101,7 +101,7 @@ const TrainsView = () => {
                     )}
                   </td>
                   <td>
-                    <Link to="/train-update">
+                    <Link to="/train-status">
                       <button type="button" className="btn btn-warning">
                         <i className="fas fa-edit"></i>&nbsp; Update Status
                       </button>
