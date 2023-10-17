@@ -34,7 +34,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               {/* Link to the "Create a Schedule" page */}
-              <Link className="nav-link" to="/train-management">View Schedules</Link>
+              <Link className="nav-link" to="/train-management">VIEW SCHEDULES</Link>
             </li>
             <li className="nav-item">
               {/* Link to the "View Bookings" page */}
