@@ -1,6 +1,11 @@
 import React from 'react';
 import image from '../../images/createTicket.jpeg';
 
+//for date picking logics
+import { useState, useEffect } from 'react';
+import { isWithinInterval, addDays, subDays } from 'date-fns'; // Import date manipulation functions
+
+
 // Import Bootstrap styles and JavaScript
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css';
@@ -15,6 +20,31 @@ import { Link } from 'react-router-dom';
 
 // Define the CreateTicket component
 const CreateTicket = () => {
+
+ // State to store the selected date and error message
+ const [selectedDate, setSelectedDate] = useState('');
+ const [allowedDateRange, setAllowedDateRange] = useState({ start: null, end: null });
+ const [errorMessage, setErrorMessage] = useState('');
+
+ // Calculate the date range (30 days in the future)
+ useEffect(() => {
+   const today = new Date();
+   const futureDate = addDays(today, 30);
+   const pastDate = subDays(today, 1); // Optional: Set a past date as the lower limit
+   setAllowedDateRange({ start: pastDate, end: futureDate });
+ }, []);
+
+ // Validate the selected date
+ const handleDateChange = (date) => {
+   setSelectedDate(date);
+   if (!isWithinInterval(new Date(date), allowedDateRange)) {
+     setErrorMessage('Please select a date within the next 30 days.');
+   } else {
+     setErrorMessage('');
+   }
+ };
+
+
   return (
     <div
       className="bg-light"
@@ -34,11 +64,29 @@ const CreateTicket = () => {
           <div className="row" style={{ textAlign: 'left', color:'gray', fontSize:'20px' }}>
             <center>
               <br/>
+
               <div className="col-md-7">
                 <div className="form-group">
                   <label htmlFor="date">Date</label>
-                  <input type="text" id="date" className="form-control datepicker" required />
-            
+                  <input
+                    type="date" // Use type="date" for date selection
+                    id="date"
+                    className="form-control datepicker"
+                    required
+                    value={selectedDate}
+                    onChange={(e) => handleDateChange(e.target.value)}
+                  />
+                </div>
+                {errorMessage && (
+                  <div className="alert alert-danger" role="alert">
+                    {errorMessage}
+                  </div>
+                )}</div>
+
+
+
+              <div className="col-md-7">
+                <div className="form-group">
                   <label htmlFor="time">Time</label>
                   <input type="time" id="time" className="form-control" required />
                 </div>
