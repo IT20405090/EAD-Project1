@@ -33,6 +33,10 @@ const Navbar = () => {
               <Link className="nav-link" to="/train-create">Create a Schedule</Link>
             </li>
             <li className="nav-item">
+              {/* Link to the "Create a Schedule" page */}
+              <Link className="nav-link" to="/train-management">View Schedules</Link>
+            </li>
+            <li className="nav-item">
               {/* Link to the "View Bookings" page */}
               <Link className="nav-link" to="/trains">Add Trains</Link>
             </li>
