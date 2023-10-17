@@ -18,6 +18,7 @@ import Footer from "./components/Footer";
 
 import Form12 from "./components/Train/form"
 import TrainFormPage from "./components/Train/CreateTrains";
+import TrainsView from "./components/Train/ViewTrains";
 
 
 
@@ -49,6 +50,7 @@ export default function AppRouter() {
           <Route path="/train-management" element={<TrainManagement />} />
           <Route path="/train-create" element={<CreateTrainSchedule />} />
           <Route path="/train-update" element={<UpdateTrainSchedule />} />
+          <Route path="/train-view" element={<TrainsView />} />
 
           <Route path="/ticket-management" element={<TicketManagement />} />
           <Route path="/ticket-create" element={<CreateTicket />} />
