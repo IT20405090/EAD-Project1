@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Button } from 'react-bootstrap';
 import trainImage from '../../images/metro1.jpg';
 import { Link } from 'react-router-dom';
@@ -6,34 +6,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 const TrainsView = () => {
-  const trainData = [
-    {
-      name: 'Express 123',
-      status: true,
-    },
-    {
-      name: 'Express 123',
-      status: true,
-    },
-    {
-      name: 'Express 123',
-      status: true,
-    },
-    {
-      name: 'Express 123',
-      status: true,
-    },
-    {
-      name: 'Express 123',
-      status: false,
-    },
-    {
-      name: 'Express 123',
-      status: false,
-    },
-  ];
-
+  const [trainData, setTrainData] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+
+  useEffect(() => {
+    // Fetch train data from the API endpoint when the component mounts
+    fetch('https://localhost:7261/api/Train')
+      .then((response) => response.json())
+      .then((data) => setTrainData(data))
+      .catch((error) => console.error('Error fetching train data:', error));
+  }, []);
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
@@ -101,7 +83,7 @@ const TrainsView = () => {
                     )}
                   </td>
                   <td>
-                    <Link to="/train-status">
+                    <Link to={`/train-status/${train.id}`}>
                       <button type="button" className="btn btn-warning">
                         <i className="fas fa-edit"></i>&nbsp; Update Status
                       </button>
