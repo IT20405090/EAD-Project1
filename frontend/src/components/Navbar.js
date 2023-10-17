@@ -33,6 +33,10 @@ const Navbar = () => {
               <Link className="nav-link" to="/train-create">Create a Schedule</Link>
             </li>
             <li className="nav-item">
+              {/* Link to the "View Bookings" page */}
+              <Link className="nav-link" to="/trains">Add Trains</Link>
+            </li>
+            <li className="nav-item">
               {/* Link to the "Book a Ticket" page */}
               <Link className="nav-link" to="/ticket-create">Book a Ticket</Link>
             </li>
@@ -44,6 +48,7 @@ const Navbar = () => {
               {/* Link to the "View Bookings" page */}
               <Link className="nav-link" to="/ticket-management">View Bookings</Link>
             </li>
+           
           </ul>
         </div>
 

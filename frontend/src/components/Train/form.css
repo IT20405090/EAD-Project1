@@ -11,7 +11,7 @@
 /* Container for the ticket form */
 .containerTicketForm {
   width: 100%;
-  max-width: 768px;
+  max-width: 730px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,7 +21,7 @@
 }
 
 /* Responsive layout for larger screens */
-@media (min-width: 768px) {
+@media (min-width: 730px) {
   .containerTicketForm {
     flex-direction: row;
     align-items: center;
@@ -35,7 +35,7 @@
 }
 
 /* Responsive layout for larger screens */
-@media (min-width: 768px) {
+@media (min-width: 730px) {
   .cta-form {
     margin-bottom: 0;
     margin-right: 2rem;
@@ -60,7 +60,7 @@
 }
 
 /* Responsive input width for larger screens */
-@media (min-width: 768px) {
+@media (min-width: 730px) {
   .form__input {
     width: clamp(120px, 35vw, 420px);
   }

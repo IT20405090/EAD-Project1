@@ -1,0 +1,29 @@
+
+.train-form-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .train-form-container-left {
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(173, 216, 230, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .train-form {
+    max-width: 450px; /* Set your preferred maximum width for the form */
+    width: 100%;
+  }
+  
+  .train-form h2 {
+    color: #000080;
+  }
+  
+  .train-picture {
+    flex: 1;
+    background: url('../../images/trains.jpg') center/cover;
+  }
+  
