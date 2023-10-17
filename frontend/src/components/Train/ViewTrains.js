@@ -9,18 +9,49 @@ const TrainsView = () => {
   const [trainData, setTrainData] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
-  useEffect(() => {
-    // Fetch train data from the API endpoint when the component mounts
+  
+  // Function to fetch the list of trains
+  const fetchTrains = () => {
     fetch('https://localhost:7261/api/Train')
       .then((response) => response.json())
       .then((data) => setTrainData(data))
-      .catch((error) => console.error('Error fetching train data:', error));
+      .catch((error) => console.error('Error fetching trains:', error));
+  };
+
+  useEffect(() => {
+    fetchTrains();
   }, []);
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
   };
 
+  const handleDeleteTrain = (trainId) => {
+    // Display a confirmation dialog to the user
+    const userConfirmed = window.confirm("Are you sure you want to delete this train?");
+  
+    if (userConfirmed) {
+      // User confirmed, proceed with deletion
+      fetch(`https://localhost:7261/api/Train/${trainId}`, {
+        method: 'DELETE',
+      })
+        .then((response) => {
+          if (response.ok) {
+            console.log('Train deleted successfully');
+            alert('Train deleted successfully');
+            fetchTrains();
+          } else {
+            console.error('Error deleting train:', response.status);
+            alert('Train deletion failed');
+          }
+        })
+        .catch((error) => {
+          console.error('Error deleting train:', error);
+          alert('Train deletion failed');
+        });
+    }
+  };
+  
   return (
     <div
       style={{
@@ -89,11 +120,9 @@ const TrainsView = () => {
                       </button>
                     </Link>
                     &nbsp;
-                    <Link to="/#">
-                      <button type="button" className="btn btn-danger">
-                        <i className="far fa-trash-alt"></i>&nbsp; Delete Train
-                      </button>
-                    </Link>
+                    <button type="button" className="btn btn-danger" onClick={() => handleDeleteTrain(train.id)}>
+                      <i className="far fa-trash-alt"></i>&nbsp; Delete Train
+                    </button>
                   </td>
                 </tr>
               ))}
