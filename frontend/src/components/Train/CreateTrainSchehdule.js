@@ -19,7 +19,7 @@ const CreateTrainSchedule = () => {
     <div className="container mt-5">
       <h2 className="TrainScehdule_topic" >Create Train Schedule </h2> <br/>
       <form>
-        <div className="row" style={{ textAlign: 'left', color:'gray', fontSize:'20px' }}>
+        <div className="row" style={{ textAlign: 'left', color:'gray', fontSize:'18px' }}>
           <div className="col-md-6">
           
           <hr/>

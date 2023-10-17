@@ -17,6 +17,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 import Form12 from "./components/Train/form"
+import TrainFormPage from "./components/Train/CreateTrains";
 
 
 
@@ -44,6 +45,7 @@ export default function AppRouter() {
 
           
           <Route path="/home" element={<Home />} />
+          <Route path="/trains" element={<TrainFormPage />} />
           <Route path="/train-management" element={<TrainManagement />} />
           <Route path="/train-create" element={<CreateTrainSchedule />} />
           <Route path="/train-update" element={<UpdateTrainSchedule />} />
