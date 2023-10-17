@@ -38,14 +38,14 @@ const UpdateUser = () => {
         <center>
           <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
           <br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <Card className="card123" style={{ marginLeft: "-1000px", maxHeight:"900px" }}>
+        <Card className="card123" style={{ marginLeft: "-1000px", maxHeight:"900px", backgroundColor: 'rgba(255, 255, 255, 0.8)' }}>
           <CardHeader>
-            <CardTitle style={{ color: "blue", fontSize: "30px" }}>
+            <CardTitle style={{ color: "blue", fontSize: "40px" }}>
               User Profile
             </CardTitle>
           </CardHeader>
           <CardBody>
-            <div style={{ width: "400px" }}>
+            <div style={{ width: "400px", fontSize: "20px" }}>
               <Form>
                 <label>User Name</label>
                 <Input
