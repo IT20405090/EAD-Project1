@@ -281,8 +281,8 @@ const CreateTrainSchedule = () => {
               </button>
             </div>
           </form>
-          <br/><br/><br/><br/><br/>
         </div>
+        <br/> <br/> <br/> <br/>
       </div>
     </div>
   );
