@@ -71,10 +71,10 @@ const CreateTrainSchedule = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  useEffect(() => {
-    // Initialize datepicker when the component mounts
-    $('.datepicker').datepicker();
-  }, []);
+  // useEffect(() => {
+  //   // Initialize datepicker when the component mounts
+  //   $('.datepicker').datepicker();
+  // }, []);
 
   return (
     <div className="container-fluid">
@@ -92,7 +92,7 @@ const CreateTrainSchedule = () => {
                   </label>
                   <input
                     type="date"
-                    className="form-control datepicker"
+                    className="form-control"
                     id="date"
                     name="date"
                     placeholder="Enter the date"
@@ -101,6 +101,7 @@ const CreateTrainSchedule = () => {
                     onChange={handleInputChange}
                   />
                 </div>
+
 
                 <div className="mb-3">
                   <label htmlFor="startTime" className="form-label">
@@ -288,8 +289,8 @@ const CreateTrainSchedule = () => {
               </button>
             </div>
           </form>
+          <br/><br/><br/><br/><br/>
         </div>
-        <br/> <br/> <br/> <br/>
       </div>
     </div>
   );
