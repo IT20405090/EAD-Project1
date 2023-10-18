@@ -1,13 +1,77 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import $ from 'jquery'; // Import jQuery
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js';
 import "./TrainSchedule.css"
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const CreateTrainSchedule = () => {
+  const navigate = useNavigate();
+
+  const [formData, setFormData] = useState({
+    date:'',
+    startTime:'',
+    endTime:'',
+    startingStation:'',
+    endingStation:'',
+    duration:'',
+    trainName:'',
+    engineNumber:'',
+    availableSeats:'',
+    specialNotices:'',
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Prepare the data to send to the API
+    const scheduleData = {
+      Date: formData.date,
+      StartTime: formData.startTime,
+      TrainEngine: formData.trainEngine,
+      StartingStation: formData.startingStation,
+      AvailableSeats: formData.availableSeats,
+      Duration: formData.duration,
+      EndTime: formData.endTime,
+      TrainName: formData.trainName,
+      EndingStation: formData.endingStation,
+      SpecialNotices: formData.specialNotices
+      // Map other form fields here
+    };
+
+    // Send a POST request to your API
+    fetch('https://localhost:7261/api/Schedule', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(scheduleData),
+    })
+      .then((response) => {
+        if (response.ok) {
+          // The POST request was successful
+          console.log('Schedule created successfully.');
+          alert('Schedule created successfully.');
+          // Reset the form or perform any other actions as needed
+          navigate('/train-view');
+        } else {
+          // Handle errors here
+          console.error('Failed to create the schedule.');
+          alert('Schedule is not created.');
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
   useEffect(() => {
     // Initialize datepicker when the component mounts
     $('.datepicker').datepicker();
@@ -18,7 +82,7 @@ const CreateTrainSchedule = () => {
     <div className="bg-light">
     <div className="container mt-5">
       <h2 className="TrainScehdule_topic" >Create Train Schedule </h2> <br/>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="row" style={{ textAlign: 'left', color:'gray', fontSize:'18px' }}>
           <div className="col-md-6">
           
@@ -37,8 +101,8 @@ const CreateTrainSchedule = () => {
             <br/>
             <hr/>
             <div className="mb-3">
-            <label htmlFor="duration" className="form-label">Train Engine</label>
-            <input type="number" className="form-control" id="engine" placeholder='Enter the engine number' required /> 
+            <label htmlFor="trainEngine" className="form-label">Train Engine</label>
+            <input type="text" className="form-control" id="engine" placeholder='Enter the engine number' required /> 
             </div>
 
             <div className="mb-3">
@@ -53,7 +117,7 @@ const CreateTrainSchedule = () => {
             </div>
 
             <div className="mb-3">
-              <label htmlFor="trainId" className="form-label">Available Seats</label>
+              <label htmlFor="availableSeats" className="form-label">Available Seats</label>
               <input type="text" className="form-control" id="trainId" placeholder='Enter the available seats count' required />
             </div>
           </div>
