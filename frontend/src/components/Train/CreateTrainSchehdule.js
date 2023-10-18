@@ -91,7 +91,7 @@ const CreateTrainSchedule = () => {
                     Date
                   </label>
                   <input
-                    type="text"
+                    type="date"
                     className="form-control datepicker"
                     id="date"
                     name="date"
@@ -120,21 +120,6 @@ const CreateTrainSchedule = () => {
 
                 <br />
                 <hr />
-                <div className="mb-3">
-                  <label htmlFor="trainEngine" className="form-label">
-                    Train Engine
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="trainEngine"
-                    name="trainEngine"
-                    placeholder="Enter the engine number"
-                    required
-                    value={formData.trainEngine}
-                    onChange={handleInputChange}
-                  />
-                </div>
 
                 <div className="mb-3">
                   <label htmlFor="engine" className="form-label">
@@ -214,6 +199,28 @@ const CreateTrainSchedule = () => {
                     value={formData.trainName}
                     onChange={handleInputChange}
                   />
+                </div>
+
+                <div className="mb-3">
+                  <label htmlFor="trainEngine" className="form-label">
+                    Starting Station
+                  </label>
+                  <select
+                    className="form-select"
+                    id="startingStation"
+                    name="startingStation"
+                    required
+                    value={formData.startingStation}
+                    onChange={handleInputChange}
+                  >
+                    <option value="">Select Starting Station</option>
+                    <option>Gampaha</option>
+                    <option>Colombo-Fort</option>
+                    <option>Colombo-Maradana</option>
+                    <option>Colombo-Dematagoda</option>
+                    <option>Moratuwa</option>
+                    <option>Panadura</option>
+                  </select>
                 </div>
 
                 <div className="mb-3">
