@@ -1,27 +1,37 @@
-﻿using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
-namespace TravelWebService.Model
+public class Shedule
 {
-    public class Shedule
-    {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string? Id { get; set; }
+    [Key]
+    public int Id { get; set; }
 
-        [BsonElement("TrainId")]
-        public string TrainId { get; set; } = string.Empty;
+    [Required]
+    public DateTime Date { get; set; }
 
-        [BsonElement("Start")]
-        public string Start { get; set; } = string.Empty;
+    [Required]
+    public TimeSpan StartTime { get; set; }
 
-        [BsonElement("End")]
-        public string End { get; set; } = string.Empty;
+    [Required]
+    public TimeSpan EndTime { get; set; }
 
-        [BsonElement("ArivingTime")]
-        public string ArivingTime { get; set; } = string.Empty;
+    [Required]
+    public string StartingStation { get; set; } = string.Empty;
 
-        [BsonElement("DepatureTime")]
-        public string DepatureTime { get; set; } = string.Empty;
-    }
+    [Required]
+    public string EndingStation { get; set; } = string.Empty;
+
+    [Required]
+    public double Duration { get; set; }
+
+    [Required]
+    public string TrainEngine { get; set; } = string.Empty;
+
+    [Required]
+    public string TrainName { get; set; } = string.Empty;
+
+    [Required]
+    public int AvailableSeats { get; set; }
+
+    public string SpecialNotices { get; set; } = string.Empty;
 }

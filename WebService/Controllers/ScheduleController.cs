@@ -20,6 +20,7 @@ namespace TravelWebService.Controllers
         public async Task<List<Shedule>> Get() =>
             await _sheduleService.GetAsync();
 
+
         [HttpGet("{id:length(24)}")]
         public async Task<ActionResult<Shedule>> Get(string id)
         {
