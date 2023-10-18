@@ -101,9 +101,30 @@ const CreateTrainSchedule = () => {
             <br/>
             <hr/>
             <div className="mb-3">
+<<<<<<< HEAD
             <label htmlFor="trainEngine" className="form-label">Train Engine</label>
             <input type="text" className="form-control" id="engine" placeholder='Enter the engine number' required /> 
             </div>
+=======
+            <label htmlFor="engine" className="form-label">
+              Train Engine
+            </label>
+            <select className="form-select" id="engine" required>
+              <option value="">Select Train Engine</option>
+              <option value={1001}>1001</option>
+              <option value={1002}>1002</option>
+              <option value={1003}>1003</option>
+              <option value={1004}>1004</option>
+              <option value={1005}>1005</option>
+              <option value={1006}>1006</option>
+              <option value={1007}>1007</option>
+              <option value={1008}>1008</option>
+              <option value={1009}>1009</option>
+              <option value={1010}>1010</option>
+            </select>
+          </div>
+
+>>>>>>> f0d8bd593037f5adecdc6688a2c6c004f08ca149
 
             <div className="mb-3">
               <label htmlFor="startingStation" className="form-label">Starting Station</label>
@@ -113,6 +134,9 @@ const CreateTrainSchedule = () => {
                 <option>Colombo-Fort</option>
                 <option>Colombo-Maradana</option>
                 <option>Colombo-Dematagoda</option>
+                <option>Moratuwa</option>
+                <option>Panadura</option>
+
               </select>
             </div>
 
@@ -153,6 +177,8 @@ const CreateTrainSchedule = () => {
                 <option>Colombo-Fort</option>
                 <option>Colombo-Maradana</option>
                 <option>Colombo-Dematagoda</option>
+                <option>Moratuwa</option>
+                <option>Panadura</option>
               </select>
             </div>
           </div>

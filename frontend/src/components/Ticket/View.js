@@ -7,7 +7,7 @@ const TicketManagement = () => {
   const ticketData = [
     {
       refID: '123D',
-      busName: 'Express 123',
+      trainName: 'Express 123',
       to: 'Moratuwa',
       from: 'Gampaha',
       ticketFare: '$400',
@@ -17,7 +17,7 @@ const TicketManagement = () => {
     },
     {
       refID: '573E',
-      busName: 'Econmy 123',
+      trainName: 'Econmy 123',
       to: 'Galle',
       from: 'Colombo',
       ticketFare: '$1200',
@@ -27,7 +27,7 @@ const TicketManagement = () => {
     },
     {
       refID: '124D',
-      busName: 'Express 123',
+      trainName: 'Express 123',
       to: 'Moratuwa',
       from: 'Gampaha',
       ticketFare: '$400',
@@ -37,7 +37,7 @@ const TicketManagement = () => {
     },
     {
       refID: '345E',
-      busName: 'Econmy 123',
+      trainName: 'Econmy 123',
       to: 'Moratuwa',
       from: 'Colombo',
       ticketFare: '$100',
@@ -89,7 +89,7 @@ const TicketManagement = () => {
         <thead className="thead-dark">
           <tr>
             <th>Reference ID</th>
-            <th>Bus Name</th>
+            <th>Train Name</th>
             <th>Destination</th>
             <th>Departure Stand</th>
             <th>Ticket Fare</th>
@@ -102,12 +102,12 @@ const TicketManagement = () => {
         <tbody>
           {ticketData
             .filter((ticket) =>
-            ticket.busName.toLowerCase().includes(searchTerm.toLowerCase())
+            ticket.trainName.toLowerCase().includes(searchTerm.toLowerCase())
             )
             .map((ticket, index) => (
               <tr key={index}>
                 <td>{ticket.refID}</td>
-                <td>{ticket.busName}</td>
+                <td>{ticket.trainName}</td>
                 <td>{ticket.to}</td>
                 <td>{ticket.from}</td>
                 <td>{ticket.ticketFare}</td>

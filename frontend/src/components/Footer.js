@@ -9,7 +9,7 @@ const Footer = () => {
 	return (
 		<div>
 			<div style={{marginTop:'0px'}}>
-                 <footer className="bg-dark text-center text-white">
+                 <footer className="bg-dark text-center text-white" style={{ position: "fixed", bottom: 0, width: "100%" }}>
                    
                     <div className="container p-4 pb-0" >
                        

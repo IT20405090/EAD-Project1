@@ -158,10 +158,15 @@ const UpdateTicket = () => {
 
         </div>
         
-      
+        <Link to="/ticket-passenger-update">
+          <button type="button" class="btn btn-secondary" style={{ width: '750px' }}>Update Passenger Details</button>
+        </Link>
       </form>
+      <br/><br/>
     </div>
+    <br/><br/><br/><br/>
     </div>
+    
   );
 };
 
